@@ -1,13 +1,14 @@
 import Navbar from "./navbar";
 import Footer from "./footer";
 import "./globals.css";
+
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>
-        <Navbar/>
-        {children}
-        <Footer/>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow pt-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );
