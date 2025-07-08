@@ -26,22 +26,18 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+      className={`fixed w-full z-50 shadow-md bg-white transition-all duration-300 ${
+        scrolled ? "border-b border-gray-200" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-10 w-10 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold">
+            <div className="h-10 w-10 bg-sky-600 rounded-full flex items-center justify-center text-white font-bold shadow-md">
               SSC
             </div>
-            <span
-              className={`text-xl font-bold ${
-                scrolled ? "text-sky-600" : "text-white"
-              }`}
-            >
+            <span className="text-xl font-bold text-gray-800">
               Soft Skills Club
             </span>
           </Link>
@@ -52,11 +48,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`${
-                  scrolled
-                    ? "text-gray-700 hover:text-sky-600"
-                    : "text-white hover:text-sky-200"
-                } font-medium transition`}
+                className="text-gray-700 hover:text-sky-600 hover:underline underline-offset-4 font-medium transition duration-200"
               >
                 {link.name}
               </Link>
@@ -67,63 +59,54 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="focus:outline-none"
+              className="text-sky-600 focus:outline-none"
             >
-              {mobileMenuOpen ? (
-                <svg
-                  className="h-6 w-6 text-sky-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {mobileMenuOpen ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M6 18L18 6M6 6l12 12"
                   />
-                </svg>
-              ) : (
-                <svg
-                  className={`h-6 w-6 ${
-                    scrolled ? "text-sky-600" : "text-white"
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                ) : (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M4 6h16M4 12h16M4 18h16"
                   />
-                </svg>
-              )}
+                )}
+              </svg>
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div
-          className="md:hidden bg-white shadow-lg transition-all duration-300 ease-in-out"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.path}
-                className="block px-3 py-2 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-md"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`md:hidden bg-white transition-all duration-300 overflow-hidden ${
+          mobileMenuOpen ? "max-h-[500px] shadow-md" : "max-h-0"
+        }`}
+      >
+        <div className="px-4 py-3 space-y-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.path}
+              className="block px-3 py-2 text-gray-700 hover:text-white hover:bg-sky-600 rounded-md transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
