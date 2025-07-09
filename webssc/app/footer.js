@@ -177,13 +177,13 @@ export default function Footer() {
                 Interested in joining our club or partnering with us?
               </p>
               <Link href="/contact">
-                <motion.div
-                  className="w-full inline-block  bg-white text-[#0B6B52] py-2 px-12.5 rounded-full font-medium text-sm hover:bg-gray-100 transition-colors"
+                <motion.button
+                  className="w-full bg-white text-[#0B6B52] py-2 px-4 rounded-full font-medium text-sm hover:bg-gray-100 transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Join Our Community
-                </motion.div>
+                </motion.button>
               </Link>
             </motion.div>
           </motion.div>
@@ -202,19 +202,19 @@ export default function Footer() {
           </p>
           <div className="flex justify-center gap-6 text-xs">
             <Link
-              href="/privacy"
+              href="./privacy.pdf"
               className="hover:text-white hover:underline transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="./terms.pdf"
               className="hover:text-white hover:underline transition-colors"
             >
               Terms of Service
             </Link>
             <Link
-              href="/sitemap"
+              href="./sitemap.pdf"
               className="hover:text-white hover:underline transition-colors"
             >
               Sitemap

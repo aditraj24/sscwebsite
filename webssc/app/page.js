@@ -106,39 +106,43 @@ export default function Home() {
               Transform your potential into excellence with our proven programs
             </h2>
             <div className="flex flex-wrap gap-4 mt-8">
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 8px 20px rgba(255, 216, 194, 0.3)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 500, // Increased stiffness for faster response
-                  damping: 15,
-                  duration: 0.2, // Added explicit duration
-                }}
-                className="bg-white text-[#0B6B52] px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
-              >
-                Sponsor Our Mission
-              </motion.button>
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                  backdropFilter: "blur(10px)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 500, // Increased stiffness for faster response
-                  damping: 15,
-                  duration: 0.2, // Added explicit duration
-                }}
-                className="border-2 border-white/30 px-8 py-4 rounded-full font-semibold shadow-md hover:bg-white/5 hover:border-white/50 transition-all backdrop-blur-sm"
-              >
-                Know More
-              </motion.button>
+              <Link href="/sponsor">
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 8px 20px rgba(255, 216, 194, 0.3)",
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500, // Increased stiffness for faster response
+                    damping: 15,
+                    duration: 0.2, // Added explicit duration
+                  }}
+                  className="bg-white text-[#0B6B52] px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+                >
+                  Sponsor Our Mission
+                </motion.div>
+              </Link>
+              <Link href="/about">
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(10px)",
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500, // Increased stiffness for faster response
+                    damping: 15,
+                    duration: 0.2, // Added explicit duration
+                  }}
+                  className="border-2 border-white/30 px-8 py-4 rounded-full font-semibold shadow-md hover:bg-white/5 hover:border-white/50 transition-all backdrop-blur-sm"
+                >
+                  Know More
+                </motion.div>
+              </Link>
             </div>
           </motion.div>
 
@@ -246,7 +250,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            A journey to contribute to students' personality development
+            A journey contributing to students' personality development
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -400,13 +404,15 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-12 px-6 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md"
-          >
-            Explore Events
-          </motion.button>
+          <Link href="/activities">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              Explore Events
+            </motion.div>
+          </Link>
         </div>
       </section>
 
@@ -440,13 +446,15 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-12 px-6 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md"
-          >
-            Know Our Past
-          </motion.button>
+          <Link href="/memories">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              Visit Gallery
+            </motion.div>
+          </Link>
         </div>
       </section>
       {/*our alumni */}
@@ -493,6 +501,15 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          <Link href="/alumni">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              Know Better
+            </motion.div>
+          </Link>
         </div>
       </section>
       {/* Contact Us Section */}
@@ -522,7 +539,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
           >
             <a
-              href="mailto:ssc@nitjsr.ac.in?subject=Inquiry%20About%20Soft%20Skills%20Club"
+              href="mailto:ssc@nitjsr.ac.in"
               className="inline-flex items-center gap-3 px-6 py-3 bg-[#0B6B52]/10 text-[#0B6B52] font-semibold rounded-full hover:bg-[#0B6B52]/20 transition-all"
             >
               <Mail className="w-5 h-5" />
