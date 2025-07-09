@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Mail, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 import alumniData from "./jsonfiles/alumni.json";
-
+import Link from "next/link";
 const activities = [
   "Debate",
   "Extempore",
@@ -154,7 +154,7 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 {[
                   "/homepageImages/heroImg1.avif",
-                  "/homepageImages/heroImg3.png",
+                  "/homepageImages/heroImg3.avif",
                 ].map((src, i) => (
                   <motion.div
                     key={i}
@@ -229,11 +229,11 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      {/*about*/}
+      {/* About Section */}
       <section className="bg-white py-20 px-6" id="about">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-[#0B6B52] mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#0B6B52] mb-6 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -241,27 +241,139 @@ export default function Home() {
             Our Journey
           </motion.h2>
           <motion.p
-            className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600 mb-12 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Founded in 2012 by Dr. Rajiv Bhusan, the Soft Skills Club at NIT
-            Jamshedpur was created to help students master the art of public
-            speaking, interpersonal communication, and confidence. Today, our
-            club empowers hundreds of students to crack interviews, present
-            effectively, and become future leaders.
+            A journey to contribute to students' personality development
           </motion.p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 px-6 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-lg"
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Tile 1 - Established */}
+            <motion.div
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-[#0B6B52]/30 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="p-8 h-full flex flex-col">
+                <div className="w-14 h-14 bg-[#0B6B52]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#0B6B52]/20 transition-colors">
+                  <svg
+                    className="w-6 h-6 text-[#0B6B52]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#0B6B52] mb-3">
+                  Established 2012
+                </h3>
+                <p className="text-gray-600 flex-grow">
+                  Founded in 2012 by Dr. Rajiv Bhusan, the Soft Skills Club at
+                  NIT Jamshedpur was created to help students master essential
+                  communication skills.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Tile 2 - Our Motto */}
+            <motion.div
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-[#0B6B52]/30 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="p-8 h-full flex flex-col">
+                <div className="w-14 h-14 bg-[#0B6B52]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#0B6B52]/20 transition-colors">
+                  <svg
+                    className="w-6 h-6 text-[#0B6B52]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#0B6B52] mb-3">
+                  Our Motto
+                </h3>
+                <p className="text-gray-600 flex-grow">
+                  To empower students with confidence, public speaking
+                  abilities, and interpersonal skills that transform them into
+                  effective communicators and leaders.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Tile 3 - Our Impact */}
+            <motion.div
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-[#0B6B52]/30 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="p-8 h-full flex flex-col">
+                <div className="w-14 h-14 bg-[#0B6B52]/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#0B6B52]/20 transition-colors">
+                  <svg
+                    className="w-6 h-6 text-[#0B6B52]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-[#0B6B52] mb-3">
+                  Our Impact
+                </h3>
+                <p className="text-gray-600 flex-grow">
+                  Today, our club empowers hundreds of students to crack
+                  interviews, present effectively, and become the confident
+                  leaders of tomorrow.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
           >
-            Explore More
-          </motion.button>
+            <Link href="/about">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              >
+                Know More
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </section>
-
       {/*events*/}
       <section className="bg-gray-100 py-20 px-6" id="activities">
         <div className="max-w-7xl mx-auto text-center">
@@ -293,10 +405,11 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             className="mt-12 px-6 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md"
           >
-            Explore All
+            Explore Events
           </motion.button>
         </div>
       </section>
+
       {/*gallery */}
       <section className="bg-white py-20 px-6" id="gallery">
         <div className="max-w-7xl mx-auto text-center">
@@ -382,7 +495,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/*contact us*/}
+      {/* Contact Us Section */}
       <section className="bg-white py-20 px-6" id="contact">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
@@ -403,57 +516,71 @@ export default function Home() {
             We'd love to hear from you.
           </motion.p>
 
-          <motion.a
-            href="mailto:ssc@nitjsr.ac.in"
-            className="inline-flex items-center gap-2 text-[#0B6B52] font-semibold underline underline-offset-4 hover:text-[#FBC5C5] transition"
+          <motion.div
+            className="inline-block"
             whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Mail className="w-5 h-5" />
-            ssc@nitjsr.ac.in
-          </motion.a>
+            <a
+              href="mailto:ssc@nitjsr.ac.in?subject=Inquiry%20About%20Soft%20Skills%20Club"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-[#0B6B52]/10 text-[#0B6B52] font-semibold rounded-full hover:bg-[#0B6B52]/20 transition-all"
+            >
+              <Mail className="w-5 h-5" />
+              ssc@nitjsr.ac.in
+            </a>
+          </motion.div>
 
           <div className="mt-10 flex justify-center gap-6">
             <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://instagram.com"
+              whileHover={{ scale: 1.2, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://instagram.com/yourclubhandle"
               target="_blank"
-              className="text-[#0B6B52] hover:text-[#FBC5C5]"
+              rel="noopener noreferrer"
+              className="text-[#0B6B52] hover:text-pink-400 transition-colors"
             >
               <Instagram className="w-6 h-6" />
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://facebook.com"
+              whileHover={{ scale: 1.2, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://facebook.com/yourclubhandle"
               target="_blank"
-              className="text-[#0B6B52] hover:text-[#FBC5C5]"
+              rel="noopener noreferrer"
+              className="text-[#0B6B52] hover:text-blue-400 transition-colors"
             >
               <Facebook className="w-6 h-6" />
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://linkedin.com"
+              whileHover={{ scale: 1.2, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://linkedin.com/company/yourclubhandle"
               target="_blank"
-              className="text-[#0B6B52] hover:text-[#FBC5C5]"
+              rel="noopener noreferrer"
+              className="text-[#0B6B52] hover:text-sky-300 transition-colors"
             >
               <Linkedin className="w-6 h-6" />
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.2 }}
-              href="https://youtube.com"
+              whileHover={{ scale: 1.2, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://youtube.com/yourclubhandle"
               target="_blank"
-              className="text-[#0B6B52] hover:text-[#FBC5C5]"
+              rel="noopener noreferrer"
+              className="text-[#0B6B52] hover:text-red-400 transition-colors"
             >
               <Youtube className="w-6 h-6" />
             </motion.a>
           </div>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-12 px-6 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md"
-          >
-            Join Our Community
-          </motion.button>
+          <Link href="/contact">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              Join Our Community
+            </motion.div>
+          </Link>
         </div>
       </section>
     </>
