@@ -176,7 +176,8 @@ export default function AboutUsPage() {
     <Box sx={{
       minHeight: '100vh',
       py: 5,
-      background: 'linear-gradient(to bottom, #e0f2fe, #fff)'
+      background: 'linear-gradient(to bottom right, #0B6B52, #ffffff)',
+      fontFamily: "Fondamento, cursive",
     }}>
       <Container maxWidth="lg" sx={{ py: 5 }}>
         {/* Club Short Description */}
@@ -187,11 +188,17 @@ export default function AboutUsPage() {
         variants={fadeInUp}
       >
         <Box sx={{ mb: 5 }}>
-          <Typography variant="h2" fontWeight="bold" gutterBottom display={"flex"} alignItems={"center"} justifyContent={"center"}>
+          <Typography variant="h2" fontWeight="bold" color="white" gutterBottom display={"flex"} alignItems={"center"} justifyContent={"center"}>
             Who We Are
           </Typography>
           <Typography variant="body1">
-            The <b>Soft Skills Club</b> is a vibrant community dedicated to empowering individuals with essential interpersonal and professional skills. Our mission is to foster growth in communication, leadership, teamwork, and emotional intelligence, preparing members for success in both academic and professional environments.
+            The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club’s mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
+          </Typography>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            It plays a crucial role in preparing students for professional environments by enhancing their communication, leadership, and interpersonal skills. The club regularly collaborates with industry leaders and organizes training programs, placement talks, and interactive sessions with experts to help students become not just skilled professionals but also responsible and empathetic individuals.
+          </Typography>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            Through its vibrant community and diverse events, the Soft Skills Club aims to bring out the best in every student and equip them with the confidence and abilities needed for both campus life and future careers.
           </Typography>
         </Box>
       </motion.div>
@@ -205,7 +212,7 @@ export default function AboutUsPage() {
       >
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 6, flexDirection: { xs: 'column', md: 'row' }, textAlign: { xs: 'center', md: 'left' } }}  
         >
-          <motion.div variants={fadeInLeft}>
+          <motion.div variants={fadeInLeft} >
             <Avatar
               src={professor.photo}
               alt={professor.name}
@@ -251,7 +258,7 @@ export default function AboutUsPage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <Typography variant="h2" fontWeight="bold" gutterBottom sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h2" fontWeight="bold" color="white" gutterBottom sx={{ display: 'flex', justifyContent: 'center' }}>
           Meet Our Team
         </Typography>
       </motion.div>
@@ -266,13 +273,13 @@ export default function AboutUsPage() {
         >
           <Box spacing={3} sx={{ mt: 5 }}>
             <motion.div variants={fadeInUp}>
-              <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+              <Typography variant="h4" fontWeight="bold" color="black"  sx={{ mb: 2 }} display={"flex"} alignItems={"center"} justifyContent={"center"}>
                 {team.name}
               </Typography>
             </motion.div>
             <Grid container spacing={5} sx={{ display: 'flex', justifyContent: 'center' }}>
               {team.members.map((member, memberIndex) => (
-                <Grid item xs={12} sm={6} md={4} key={member.name}>
+                <Grid item xs={12} sm={8} md={6} key={member.name}>
                   <motion.div
                     variants={cardVariant}
                     whileHover="hover"
@@ -285,7 +292,8 @@ export default function AboutUsPage() {
                       height: '100%',
                       px:4,
                       boxShadow: 3,
-                      background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)',
+                    //   background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)',
+                      background: 'linear-gradient(to bottom right, #0d4f3c, #4ade80)',
                       color: 'white',
                       '&:hover': {
                         boxShadow: 8
@@ -298,7 +306,7 @@ export default function AboutUsPage() {
                         <Avatar
                           src={member.photo}
                           alt={member.name}
-                          sx={{ width: 160, height: 160, mx: "auto", mb: 2 }}
+                          sx={{ width: '100%', height: 160, mx: "auto", mb: 2, borderRadius: 2 }}
                         />
                       </motion.div>
                       <CardContent>
