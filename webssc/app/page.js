@@ -25,91 +25,203 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-[#0B6B52] text-white px-6 py-20 relative overflow-hidden">
-        {/* Animated background glow */}
-        <motion.div
-          className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-pink-300 rounded-full blur-[120px] opacity-30 z-0"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 6, repeat: Infinity }}
-        />
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B6B52] to-[#083D30] text-white px-6 py-20 relative overflow-hidden isolate">
+        {/* Subtle animated background elements */}
+        <div className="absolute inset-0 overflow-hidden z-0">
+          <motion.div
+            className="absolute top-1/4 -left-20 w-[300px] h-[300px] bg-[#FFD8C2] rounded-full blur-[100px] opacity-20"
+            animate={{
+              x: [0, 40, 0],
+              y: [0, -30, 0],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/3 -right-20 w-[400px] h-[400px] bg-[#FBC5C5] rounded-full blur-[100px] opacity-20"
+            animate={{
+              x: [0, -50, 0],
+              y: [0, 40, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.05)_0%,_transparent_70%)]" />
+
+          {/* Floating Bubbles - Background only */}
+          {[...Array(24)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
+              style={{
+                width: `${Math.random() * 80 + 40}px`,
+                height: `${Math.random() * 80 + 40}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, (Math.random() - 0.5) * 80],
+                x: [0, (Math.random() - 0.5) * 60],
+                opacity: [0.1, 0.3, 0.1],
+                rotate: [0, Math.random() * 360],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 15,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: Math.random() * 10,
+              }}
+            />
+          ))}
+        </div>
 
         <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center z-10">
           {/* Left Side - Text */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Empowering Students with <br />
-              <span className="text-[#FFD8C2]">Communication</span> &{" "}
-              <span className="text-[#FBC5C5]">Leadership Skills</span>
+            <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+              <span className="text-white/80">Empowering Students Through</span>
+              <br />
+              <span className="text-[#FFD8C2] text-4xl md:text-6xl font-extrabold">
+                Communication
+              </span>{" "}
+              &{" "}
+              <span className="text-[#FBC5C5] text-4xl md:text-6xl font-extrabold">
+                Leadership
+              </span>
             </h1>
-            <h2 className="text-xl md:text-2xl font-light mb-6">
-              Learn. Express. Lead.
+            <h2 className="text-xl md:text-2xl font-light text-white/90">
+              Transform your potential into excellence with our proven programs
             </h2>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mt-8">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-[#0B6B52] px-6 py-3 rounded-full font-semibold shadow-lg"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 8px 20px rgba(255, 216, 194, 0.3)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 500, // Increased stiffness for faster response
+                  damping: 15,
+                  duration: 0.2, // Added explicit duration
+                }}
+                className="bg-white text-[#0B6B52] px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
               >
-                Sponsor Us
+                Sponsor Our Mission
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-white hover:text-[#0B6B52] transition"
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "rgba(255,255,255,0.1)",
+                  backdropFilter: "blur(10px)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 500, // Increased stiffness for faster response
+                  damping: 15,
+                  duration: 0.2, // Added explicit duration
+                }}
+                className="border-2 border-white/30 px-8 py-4 rounded-full font-semibold shadow-md hover:bg-white/5 hover:border-white/50 transition-all backdrop-blur-sm"
               >
                 Know More
               </motion.button>
             </div>
           </motion.div>
 
-          {/* Right Side - Enlarged 2 Column Tile Grid */}
+          {/* Right Side - Modern Image Grid */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="relative max-w-[500px] md:max-w-[600px] mx-auto"
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="relative max-w-[400px] md:max-w-[450px] mx-auto"
           >
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               {/* Column 1 */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 {[
                   "/homepageImages/heroImg1.avif",
                   "/homepageImages/heroImg3.png",
                 ].map((src, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ scale: 1.05 }}
-                    className="aspect-[4/3] rounded-xl overflow-hidden shadow-md"
+                    initial={{ y: i % 2 === 0 ? 20 : -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.5 + i * 0.1,
+                      ease: "backOut",
+                    }}
+                    className="group relative"
                   >
-                    <img
-                      src={src}
-                      alt={`tile-${i + 1}`}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
+                    <motion.div
+                      whileHover={{
+                        scale: 1.05,
+                        zIndex: 10,
+                        boxShadow: "0 25px 50px rgba(0,0,0,0.5)",
+                      }}
+                      className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-sm border-2 border-white/20 relative transition-all duration-500"
+                    >
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                        loading="eager"
+                        style={{ maxWidth: "200px" }}
+                      />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.1)_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Column 2 with vertical offset */}
-              <div className="flex flex-col gap-6 mt-10">
+              <div className="flex flex-col gap-4 mt-8">
                 {[
                   "/homepageImages/heroImg2.jpg",
                   "/homepageImages/heroImg4.avif",
                 ].map((src, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ scale: 1.05 }}
-                    className="aspect-[4/3] rounded-xl overflow-hidden shadow-md"
+                    initial={{ y: i % 2 === 0 ? -20 : 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.7 + i * 0.1,
+                      ease: "backOut",
+                    }}
+                    className="group relative"
                   >
-                    <img
-                      src={src}
-                      alt={`tile-${i + 3}`}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
+                    <motion.div
+                      whileHover={{
+                        scale: 1.05,
+                        zIndex: 10,
+                        boxShadow: "0 25px 50px rgba(0,0,0,0.5)",
+                      }}
+                      className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg bg-white/10 backdrop-blur-sm border-2 border-white/20 relative transition-all duration-500"
+                    >
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                        loading="eager"
+                        style={{ maxWidth: "200px" }}
+                      />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.1)_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
@@ -117,7 +229,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/*about*/}
       <section className="bg-white py-20 px-6" id="about">
         <div className="max-w-6xl mx-auto text-center">
