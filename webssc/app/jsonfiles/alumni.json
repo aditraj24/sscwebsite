@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Aman Kumar",
+    "role": "Software Engineer, Google",
+    "image": "/alumni/aman.jpg",
+    "linkedin": "https://linkedin.com/in/amankumar"
+  },
+  {
+    "name": "Shreya Patel",
+    "role": "UX Designer, Microsoft",
+    "image": "/alumni/shreya.jpg",
+    "linkedin": "https://linkedin.com/in/shreyapatel"
+  },
+  {
+    "name": "Raj Malhotra",
+    "role": "Public Speaker & Author",
+    "image": "/alumni/raj.jpg",
+    "linkedin": "https://linkedin.com/in/rajmalhotra"
+  }
+]
