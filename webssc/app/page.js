@@ -24,7 +24,7 @@ const images = [
 export default function Home() {
   return (
     <>
-      {/*hero section */}
+      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center bg-[#0B6B52] text-white px-6 py-20 relative overflow-hidden">
         {/* Animated background glow */}
         <motion.div
@@ -32,6 +32,7 @@ export default function Home() {
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         />
+
         <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center z-10">
           {/* Left Side - Text */}
           <motion.div
@@ -65,20 +66,53 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Right Side - 3D Tile Mockup */}
+          {/* Right Side - Enlarged 2 Column Tile Grid */}
           <motion.div
-            initial={{ opacity: 0, x: 100, rotateY: -30 }}
-            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="bg-gradient-to-br from-[#FFD8C2] to-[#FBC5C5] p-6 rounded-3xl shadow-2xl max-w-sm mx-auto transform perspective-1000 rotate-x-6 rotate-y-3 hover:rotate-y-0 hover:rotate-x-0 transition-all duration-500"
+            className="relative max-w-[500px] md:max-w-[600px] mx-auto"
           >
-            <img
-              src="/hero-image.png"
-              alt="Hero Visual"
-              className="rounded-xl shadow-md"
-            />
-            <div className="mt-4 text-[#0B6B52] font-semibold text-lg text-center">
-              Explore the Leader in You
+            <div className="grid grid-cols-2 gap-6">
+              {/* Column 1 */}
+              <div className="flex flex-col gap-6">
+                {[
+                  "/homepageImages/heroImg1.avif",
+                  "/homepageImages/heroImg3.png",
+                ].map((src, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.05 }}
+                    className="aspect-[4/3] rounded-xl overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={src}
+                      alt={`tile-${i + 1}`}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Column 2 with vertical offset */}
+              <div className="flex flex-col gap-6 mt-10">
+                {[
+                  "/homepageImages/heroImg2.jpg",
+                  "/homepageImages/heroImg4.avif",
+                ].map((src, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.05 }}
+                    className="aspect-[4/3] rounded-xl overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={src}
+                      alt={`tile-${i + 3}`}
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
