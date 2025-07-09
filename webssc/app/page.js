@@ -364,7 +364,7 @@ export default function Home() {
             className="text-center mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
           >
             <Link href="/about">
               <motion.div
@@ -403,16 +403,22 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-
-          <Link href="/activities">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              Explore Events
-            </motion.div>
-          </Link>
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <Link href="/activities">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              >
+                Explore Events
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -445,16 +451,22 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-
-          <Link href="/memories">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              Visit Gallery
-            </motion.div>
-          </Link>
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <Link href="/memories">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              >
+                Visit Gallery
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </section>
       {/*our alumni */}
@@ -501,15 +513,22 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          <Link href="/alumni">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              Know Better
-            </motion.div>
-          </Link>
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <Link href="/alumni">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              >
+                Know Better
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </section>
       {/* Contact Us Section */}
@@ -589,15 +608,22 @@ export default function Home() {
               <Youtube className="w-6 h-6" />
             </motion.a>
           </div>
-          <Link href="/contact">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              Join Our Community
-            </motion.div>
-          </Link>
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <Link href="/contact">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-12 inline-block px-8 py-3 bg-[#0B6B52] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              >
+                Join Our Community
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </>
