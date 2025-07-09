@@ -39,20 +39,31 @@ export default function Contact() {
 
   // EmailJS config
   const SERVICE_ID = "service_g5qbx5g";
-  const TEMPLATE_ID = "template_glxtkn4";
+  const TEMPLATE_ID = "template_1lmi42u";
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "v2ihS4-NY0C9HxW21";
 
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus("loading");
+    
+    // Debug: Log the form data
+    const formData = new FormData(form.current);
+    console.log("Form data:", {
+      name: formData.get('user_name'),
+      email: formData.get('user_email'),
+      message: formData.get('message')
+    });
+    
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(
         (result) => {
+          console.log("EmailJS success:", result);
           setStatus("success");
           form.current.reset();
         },
         (error) => {
+          console.error("EmailJS error:", error);
           setStatus("error");
         }
       );
