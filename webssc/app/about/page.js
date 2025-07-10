@@ -14,93 +14,121 @@ const professor = {
 
 const leadership = [
   {
-    name: 'Rahul Sharma',
+    name: 'Kumar Raunak',
     role: 'President',
-    photo: '/aboutUsImages/.jpg',
+    photo: '/aboutUsImages/President.jpg',
     bio: 'Leading the club with vision and dedication to student development.',
   },
   {
-    name: 'Priya Agarwal',
+    name: 'Shiwangi Kumari',
     role: 'Vice President',
-    photo: '/aboutUsImages/.jpg',
+    photo: '/aboutUsImages/VP.jpg',
     bio: 'Supporting club initiatives and fostering team collaboration.',
   },
 ];
 
 const teams = [
   {
-    name: 'Creative Team',
+    name: 'General Secretary',
     members: [
       {
-        name: 'Aditi Singh',
-        role: 'Creative Lead',
-        photo: '/images/creative/aditi.jpg',
+        name: 'Satwik Pal',
+        role: 'General Sec.',
+        photo: '/aboutUsImages/GenSec.jpg',
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      
+    ],
+  },
+  {
+    name: 'Joint Secretaries',
+    members: [
+      {
+        name: 'Anshu Raj',
+        role: 'Joint Sec.',
+        photo: '/aboutUsImages/AnshuSir.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
-        name: 'Rahul Mehra',
-        role: 'Graphic Designer',
-        photo: '/images/creative/rahul.jpg',
+        name: 'Sakshi Kumari',
+        role: 'Joint Sec.',
+        photo: '/aboutUsImages/SakshiMam.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
-        name: 'Simran Kaur',
-        role: 'Photographer',
-        photo: '/images/creative/simran.jpg',
+        name: 'Subhodeep Paramanik',
+        role: 'Joint Sec.',
+        photo: '/aboutUsImages/SubhodeepSir.jpg',
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: 'Apoorva Jain',
+        role: 'Joint Sec.',
+        photo: '/aboutUsImages/ApoorvaMam.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
     ],
   },
   {
-    name: 'Content Team',
+    name: 'Team Manager',
     members: [
       {
-        name: 'Vikram Patel',
-        role: 'Content Head',
-        photo: '/images/content/vikram.jpg',
+        name: 'Dhiraj Barnwal',
+        role: 'Team Manager',
+        photo: '/aboutUsImages/DhirajSir.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
-      {
-        name: 'Neha Joshi',
-        role: 'Writer',
-        photo: '/images/content/neha.jpg',
-        github: "https://github.com/Anoopkr1906",
-        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
-      },
-      {
-        name: 'Arjun Rao',
-        role: 'Editor',
-        photo: '/images/content/arjun.jpg',
-        github: "https://github.com/Anoopkr1906",
-        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
-      },
+      
     ],
   },
   {
-    name: 'Web Team',
+    name: 'Head of Departments',
     members: [
       {
-        name: 'Riya Gupta',
-        role: 'Web Lead',
-        photo: '/images/web/riya.jpg',
+        name: 'Ayush Kumar',
+        role: 'Web Head',
+        photo: '/aboutUsImages/AyushSir.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
-        name: 'Sahil Verma',
-        role: 'Frontend Developer',
-        photo: '/images/web/sahil.jpg',
+        name: 'Jay Prakash',
+        role: 'Hospitality Head',
+        photo: '/aboutUsImages/JpSir.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
-        name: 'Ankit Sharma',
+        name: 'Bhumika',
+        role: 'Literary Head',
+        photo: '/aboutUsImages/BhumikaMam.jpg',
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: 'Shradha Manre',
         role: 'Backend Developer',
-        photo: '/images/web/ankit.jpg',
+        photo: '/aboutUsImages/ShradhaMam.jpg',
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: 'Shristi Suman',
+        role: 'Backend Developer',
+        photo: '/aboutUsImages/ShristiMam.jpg',
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: 'Ketan Rawat',
+        role: 'Creative Head',
+        photo: '/aboutUsImages/KetanSir.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
@@ -227,11 +255,11 @@ export default function AboutUsPage() {
   return (
     <Box sx={{
       minHeight: '100vh',
-      py: 5,
+      py: { xs: 2, sm: 3, md: 5 },
       bgcolor: "white",
       fontFamily: "Fondamento, cursive",
     }}>
-      <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 2, sm: 3, md: 5 }, px: { xs: 2, sm: 3 } }}>
         {/* Club Short Description */}
       <motion.div
         initial="hidden"
@@ -249,8 +277,9 @@ export default function AboutUsPage() {
             alignItems="center"
             justifyContent="center"
             sx={{
-              fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' },
-              whiteSpace: { xs: 'nowrap', sm: 'normal' },
+              fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' },
+              textAlign: 'center',
+              lineHeight: { xs: 1.2, sm: 1.3 },
             }}
           >
             Who We Are
@@ -259,19 +288,19 @@ export default function AboutUsPage() {
             variant="body1"
             sx={{
               fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
-              whiteSpace: { xs: 'nowrap', sm: 'normal' },
-              overflowX: { xs: 'auto', sm: 'visible' },
+              textAlign: 'justify',
+              lineHeight: { xs: 1.5, sm: 1.6 },
             }}
           >
-            The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club’s mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
+            The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club's mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
           </Typography>
           <Typography
             variant="body1"
             sx={{
               mt: 2,
               fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
-              whiteSpace: { xs: 'nowrap', sm: 'normal' },
-              overflowX: { xs: 'auto', sm: 'visible' },
+              textAlign: 'justify',
+              lineHeight: { xs: 1.5, sm: 1.6 },
             }}
           >
             It plays a crucial role in preparing students for professional environments by enhancing their communication, leadership, and interpersonal skills. The club regularly collaborates with industry leaders and organizes training programs, placement talks, and interactive sessions with experts to help students become not just skilled professionals but also responsible and empathetic individuals.
@@ -281,8 +310,8 @@ export default function AboutUsPage() {
             sx={{
               mt: 2,
               fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
-              whiteSpace: { xs: 'nowrap', sm: 'normal' },
-              overflowX: { xs: 'auto', sm: 'visible' },
+              textAlign: 'justify',
+              lineHeight: { xs: 1.5, sm: 1.6 },
             }}
           >
             Through its vibrant community and diverse events, the Soft Skills Club aims to bring out the best in every student and equip them with the confidence and abilities needed for both campus life and future careers.
@@ -303,26 +332,29 @@ export default function AboutUsPage() {
             <Avatar
               src={professor.photo}
               alt={professor.name}
-              sx={{ width: 300, height: 300, mr: { md: 3 }, mb: { xs: 2, md: 0 } ,
-              boxShadow: 3,
+              sx={{ 
+                width: { xs: 200, sm: 250, md: 300 }, 
+                height: { xs: 200, sm: 250, md: 300 }, 
+                mr: { md: 3 }, 
+                mb: { xs: 2, md: 0 },
+                boxShadow: 3,
                 '&:hover': {
                     boxShadow: 8,
                     zIndex: 1,
                 },
-              border: '4px solid #004225'
-            }}
-              
+                border: '4px solid #004225'
+              }}
             />
           </motion.div>
           <motion.div variants={fadeInRight}>
-            <Box>
+            <Box sx={{ px: { xs: 2, md: 0 } }}>
               <Typography
                 variant="h4"
                 fontWeight="bold"
                 color="#004225"
                 sx={{
-                  fontSize: { xs: '1.2rem', sm: '2rem', md: '2.5rem' },
-                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                  fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+                  lineHeight: { xs: 1.2, sm: 1.3 },
                 }}
               >
                 {professor.name}
@@ -331,8 +363,8 @@ export default function AboutUsPage() {
                 variant="h5"
                 color="text.primary"
                 sx={{
-                  fontSize: { xs: '1rem', sm: '1.3rem', md: '1.5rem' },
-                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                  fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' },
+                  lineHeight: { xs: 1.2, sm: 1.3 },
                 }}
               >
                 {professor.role}
@@ -341,9 +373,8 @@ export default function AboutUsPage() {
                 variant="body1"
                 sx={{
                   mt: 1,
-                  fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.2rem' },
-                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
-                  overflowX: { xs: 'auto', sm: 'visible' },
+                  fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.2rem' },
+                  lineHeight: { xs: 1.5, sm: 1.6 },
                 }}
               >
                 {professor.bio}
@@ -360,26 +391,27 @@ export default function AboutUsPage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={staggerContainer}
       >
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mb: 6, flexWrap: 'wrap' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: { xs: 2, md: 4 }, mb: 6, flexWrap: 'wrap' }}>
           {leadership.map((leader, index) => (
             <motion.div 
               key={leader.name}
               variants={index === 0 ? fadeInLeft : fadeInRight}
-              style={{ flex: '0 1 45%', minWidth: '300px' }}
+              style={{ flex: { xs: '1 1 100%', md: '0 1 45%' }, minWidth: '280px', maxWidth: '450px' }}
             >
               <Box sx={{ 
                 display: 'flex', 
                 alignItems: 'center', 
                 flexDirection: { xs: 'column', sm: 'row' }, 
                 textAlign: { xs: 'center', sm: 'left' },
-                height: '100%'
+                height: '100%',
+                px: { xs: 2, sm: 0 }
               }}>
                 <Avatar
                   src={leader.photo}
                   alt={leader.name}
                   sx={{ 
-                    width: 280, 
-                    height: 280, 
+                    width: { xs: 200, sm: 220, md: 280 }, 
+                    height: { xs: 200, sm: 220, md: 280 }, 
                     mr: { sm: 2 }, 
                     mb: { xs: 2, sm: 0 },
                     boxShadow: 3,
@@ -396,8 +428,8 @@ export default function AboutUsPage() {
                     fontWeight="bold"
                     color="#004225"
                     sx={{
-                      fontSize: { xs: '1.1rem', sm: '1.5rem', md: '2rem' },
-                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                      fontSize: { xs: '1.3rem', sm: '1.5rem', md: '2rem' },
+                      lineHeight: { xs: 1.2, sm: 1.3 },
                     }}
                   >
                     {leader.name}
@@ -406,8 +438,8 @@ export default function AboutUsPage() {
                     variant="h6"
                     color="text.primary"
                     sx={{
-                      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.3rem' },
-                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                      fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
+                      lineHeight: { xs: 1.2, sm: 1.3 },
                     }}
                   >
                     {leader.role}
@@ -416,9 +448,8 @@ export default function AboutUsPage() {
                     variant="body2"
                     sx={{
                       mt: 1,
-                      fontSize: { xs: '0.85rem', sm: '1rem', md: '1.1rem' },
-                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
-                      overflowX: { xs: 'auto', sm: 'visible' },
+                      fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                      lineHeight: { xs: 1.5, sm: 1.6 },
                     }}
                   >
                     {leader.bio}
@@ -429,8 +460,6 @@ export default function AboutUsPage() {
           ))}
         </Box>
       </motion.div>
-
-
 
       <motion.div
         initial={{ scaleX: 0 }}
@@ -465,8 +494,9 @@ export default function AboutUsPage() {
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' },
-            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+            fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' },
+            textAlign: 'center',
+            lineHeight: { xs: 1.2, sm: 1.3 },
           }}
         >
           Meet Our Team
@@ -492,16 +522,17 @@ export default function AboutUsPage() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: { xs: '1.1rem', sm: '1.7rem', md: '2.2rem' },
-                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                  fontSize: { xs: '1.3rem', sm: '1.7rem', md: '2.2rem' },
+                  textAlign: 'center',
+                  lineHeight: { xs: 1.2, sm: 1.3 },
                 }}
               >
                 {team.name}
               </Typography>
             </motion.div>
-            <Grid container spacing={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center' }}>
               {team.members.map((member, memberIndex) => (
-                <Grid item xs={12} sm={8} md={6} key={member.name}>
+                <Grid item xs={12} sm={6} md={4} key={member.name}>
                   <motion.div
                     variants={cardVariant}
                     whileHover="hover"
@@ -513,9 +544,8 @@ export default function AboutUsPage() {
                       py: 2,
                       height: '100%',
                       width: '100%',
-                      minWidth: '300px',
-                      maxWidth: '350px',
-                      px:4,
+                      minHeight: '350px',
+                      px: 2,
                       boxShadow: 3,
                       background: 'linear-gradient(to bottom right, #0B6B52, #083D30)',
                       color: 'white',
@@ -524,22 +554,29 @@ export default function AboutUsPage() {
                       }
                     }}>
                       <motion.div
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
                         <Avatar
                           src={member.photo}
                           alt={member.name}
-                          sx={{ width: 190, height: 190, mx: "auto", mb: 2, borderRadius: 2 }}
+                          sx={{ 
+                            width: { xs: 140, sm: 160, md: 180 }, 
+                            height: { xs: 140, sm: 160, md: 180 }, 
+                            mx: "auto", 
+                            mb: 2, 
+                            borderRadius: 2 
+                          }}
                         />
                       </motion.div>
-                      <CardContent>
+                      <CardContent sx={{ px: 1 }}>
                         <Typography
                           variant="h6"
                           fontWeight="medium"
                           sx={{
-                            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.3rem' },
-                            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
+                            lineHeight: { xs: 1.2, sm: 1.3 },
+                            mb: 1,
                           }}
                         >
                           {member.name}
@@ -547,8 +584,9 @@ export default function AboutUsPage() {
                         <Typography
                           variant="subtitle2"
                           sx={{
-                            fontSize: { xs: '0.9rem', sm: '1.05rem', md: '1.1rem' },
-                            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                            fontSize: { xs: '0.85rem', sm: '0.95rem', md: '1rem' },
+                            lineHeight: { xs: 1.2, sm: 1.3 },
+                            mb: 2,
                           }}
                         >
                           {member.role}
