@@ -549,7 +549,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
           >
             Have any questions or ideas? Want to collaborate or join the club?
-            We'd love to hear from you.
+            We&apos;d love to hear from you.
           </motion.p>
 
           <motion.div
