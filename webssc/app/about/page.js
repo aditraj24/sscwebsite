@@ -178,6 +178,13 @@ const teams = [
         linkedin: "https://www.linkedin.com/in/aditraj24/",
       },
       {
+        name: 'Ayush Verma',
+        role: 'Backend Developer',
+        photo: '/aboutUsImages/Ayush.jpg',
+        github: "https://github.com/ayushv-nitj",
+        linkedin: "https://www.linkedin.com/in/ayush-verma-jsr25",
+      },
+      {
         name: 'Saad Ansari',
         role: 'Frontend Developer',
         photo: '/aboutUsImages/Saad.jpg',
@@ -198,13 +205,7 @@ const teams = [
         github: "https://github.com/Shristy46",
         linkedin: "https://www.linkedin.com/in/shristy-shreya-686562327/",
       },
-      {
-        name: 'Ayush Verma',
-        role: 'Backend Developer',
-        photo: '/aboutUsImages/Ayush.jpg',
-        github: "https://github.com/ayushv-nitj",
-        linkedin: "https://www.linkedin.com/in/ayush-verma-jsr25",
-      },
+      
     ],
   },
 ];
