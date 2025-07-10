@@ -159,7 +159,7 @@ const teams = [
       {
         name: 'Yashika Singh',
         role: 'Frontend Developer',
-        photo: '/images/web/riya.jpg',
+        photo: '/aboutUsImages/Yashika.jpg',
         github: "https://github.com/Yasheekaa",
         linkedin: "https://www.linkedin.com/in/yashika-singh-33983a329/",
       },
@@ -240,16 +240,51 @@ export default function AboutUsPage() {
         variants={fadeInUp}
       >
         <Box sx={{ mb: 5 }}>
-          <Typography variant="h2" fontWeight="bold" color="#004225" gutterBottom display={"flex"} alignItems={"center"} justifyContent={"center"}>
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            color="#004225"
+            gutterBottom
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+              fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' },
+              whiteSpace: { xs: 'nowrap', sm: 'normal' },
+            }}
+          >
             Who We Are
           </Typography>
-          <Typography variant="body1">
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
+              whiteSpace: { xs: 'nowrap', sm: 'normal' },
+              overflowX: { xs: 'auto', sm: 'visible' },
+            }}
+          >
             The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club’s mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
           </Typography>
-          <Typography variant="body1" sx={{ mt: 2 }}>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 2,
+              fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
+              whiteSpace: { xs: 'nowrap', sm: 'normal' },
+              overflowX: { xs: 'auto', sm: 'visible' },
+            }}
+          >
             It plays a crucial role in preparing students for professional environments by enhancing their communication, leadership, and interpersonal skills. The club regularly collaborates with industry leaders and organizes training programs, placement talks, and interactive sessions with experts to help students become not just skilled professionals but also responsible and empathetic individuals.
           </Typography>
-          <Typography variant="body1" sx={{ mt: 2 }}>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 2,
+              fontSize: { xs: '0.95rem', sm: '1.1rem', md: '1.25rem' },
+              whiteSpace: { xs: 'nowrap', sm: 'normal' },
+              overflowX: { xs: 'auto', sm: 'visible' },
+            }}
+          >
             Through its vibrant community and diverse events, the Soft Skills Club aims to bring out the best in every student and equip them with the confidence and abilities needed for both campus life and future careers.
           </Typography>
         </Box>
@@ -281,13 +316,36 @@ export default function AboutUsPage() {
           </motion.div>
           <motion.div variants={fadeInRight}>
             <Box>
-              <Typography variant="h4" fontWeight="bold" color="#004225">
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                color="#004225"
+                sx={{
+                  fontSize: { xs: '1.2rem', sm: '2rem', md: '2.5rem' },
+                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                }}
+              >
                 {professor.name}
               </Typography>
-              <Typography variant="h5" color="text.primary">
+              <Typography
+                variant="h5"
+                color="text.primary"
+                sx={{
+                  fontSize: { xs: '1rem', sm: '1.3rem', md: '1.5rem' },
+                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                }}
+              >
                 {professor.role}
               </Typography>
-              <Typography variant="body1" sx={{ mt: 1 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mt: 1,
+                  fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.2rem' },
+                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                  overflowX: { xs: 'auto', sm: 'visible' },
+                }}
+              >
                 {professor.bio}
               </Typography>
             </Box>
@@ -333,13 +391,36 @@ export default function AboutUsPage() {
                   }}
                 />
                 <Box>
-                  <Typography variant="h5" fontWeight="bold" color="#004225">
+                  <Typography
+                    variant="h5"
+                    fontWeight="bold"
+                    color="#004225"
+                    sx={{
+                      fontSize: { xs: '1.1rem', sm: '1.5rem', md: '2rem' },
+                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                    }}
+                  >
                     {leader.name}
                   </Typography>
-                  <Typography variant="h6" color="text.primary">
+                  <Typography
+                    variant="h6"
+                    color="text.primary"
+                    sx={{
+                      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.3rem' },
+                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                    }}
+                  >
                     {leader.role}
                   </Typography>
-                  <Typography variant="body2" sx={{ mt: 1 }}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      mt: 1,
+                      fontSize: { xs: '0.85rem', sm: '1rem', md: '1.1rem' },
+                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                      overflowX: { xs: 'auto', sm: 'visible' },
+                    }}
+                  >
                     {leader.bio}
                   </Typography>
                 </Box>
@@ -376,7 +457,18 @@ export default function AboutUsPage() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
       >
-        <Typography variant="h2" fontWeight="bold" color="#004225" gutterBottom sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography
+          variant="h2"
+          fontWeight="bold"
+          color="#004225"
+          gutterBottom
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' },
+            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+          }}
+        >
           Meet Our Team
         </Typography>
       </motion.div>
@@ -391,7 +483,19 @@ export default function AboutUsPage() {
         >
           <Box spacing={3} sx={{ mt: 5 }}>
             <motion.div variants={fadeInUp}>
-              <Typography variant="h4" fontWeight="bold" color="#004225"  sx={{ mb: 2 }} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                color="#004225"
+                sx={{
+                  mb: 2,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: { xs: '1.1rem', sm: '1.7rem', md: '2.2rem' },
+                  whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                }}
+              >
                 {team.name}
               </Typography>
             </motion.div>
@@ -430,10 +534,23 @@ export default function AboutUsPage() {
                         />
                       </motion.div>
                       <CardContent>
-                        <Typography variant="h6" fontWeight="medium">
+                        <Typography
+                          variant="h6"
+                          fontWeight="medium"
+                          sx={{
+                            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.3rem' },
+                            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                          }}
+                        >
                           {member.name}
                         </Typography>
-                        <Typography variant="subtitle2">
+                        <Typography
+                          variant="subtitle2"
+                          sx={{
+                            fontSize: { xs: '0.9rem', sm: '1.05rem', md: '1.1rem' },
+                            whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                          }}
+                        >
                           {member.role}
                         </Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1 }}>
