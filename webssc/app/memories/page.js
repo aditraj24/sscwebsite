@@ -778,12 +778,12 @@ export default function Memories() {
                   </div>
 
                   {/* Participant Feedback */}
-                  <div className="bg-gradient-to-r from-[#FFD8C2] to-[#FBC5C5] rounded-xl p-6">
+                  {/* <div className="bg-gradient-to-r from-[#FFD8C2] to-[#FBC5C5] rounded-xl p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       Participant Feedback
                     </h3>
                     <div className="bg-white rounded-lg p-6 shadow-sm">
-                      <div className="flex items-start">
+                      <div className="flex items-stanrt">
                         <div className="w-12 h-12 bg-[#0B6B52] rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
                           {selectedMemory.feedback.split(" - ")[1]?.charAt(0) ||
                             "S"}
@@ -798,7 +798,7 @@ export default function Memories() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </motion.div>
