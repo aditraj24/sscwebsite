@@ -250,7 +250,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            A journey contributing to students' personality development
+            A journey contributing to students&apos; personality development
           </motion.p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
