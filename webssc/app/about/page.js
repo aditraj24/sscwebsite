@@ -8,7 +8,7 @@ import { GitHub, LinkedIn } from '@mui/icons-material';
 const professor = {
   name: 'Prof. Dr. Rajiv Bhusan',
   role: 'Professor In-Charge',
-  photo: '/images/professor.jpg',
+  photo: '/aboutUsImages/sir1.jpg',
   bio: 'Guiding the club with wisdom, experience, and a passion for nurturing soft skills in students.',
 };
 
@@ -16,13 +16,13 @@ const leadership = [
   {
     name: 'Rahul Sharma',
     role: 'President',
-    photo: '/images/leadership/president.jpg',
+    photo: '/aboutUsImages/.jpg',
     bio: 'Leading the club with vision and dedication to student development.',
   },
   {
     name: 'Priya Agarwal',
     role: 'Vice President',
-    photo: '/images/leadership/vicepresident.jpg',
+    photo: '/aboutUsImages/.jpg',
     bio: 'Supporting club initiatives and fostering team collaboration.',
   },
 ];
@@ -111,7 +111,7 @@ const teams = [
     members: [
       {
         name: 'Riya Gupta',
-        role: 'Web Lead',
+        role: 'EM Lead',
         photo: '/images/web/riya.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
@@ -138,14 +138,14 @@ const teams = [
       {
         name: 'Anoop Kr. Burnwal',
         role: 'Backend Developer',
-        photo: '/aboutUsImages/Anoop.jpg',
+        photo: '/aboutUsImages/anoop2.jpg',
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
         name: 'Aditya Raj',
         role: 'Backend Developer',
-        photo: '/images/web/sahil.jpg',
+        photo: '/aboutUsImages/Aditya.jpg',
         github: "https://github.com/aditraj24",
         linkedin: "https://www.linkedin.com/in/aditraj24/",
       },
@@ -166,7 +166,7 @@ const teams = [
       {
         name: 'Shristy Shreya',
         role: 'Frontend Developer',
-        photo: '/images/web/sahil.jpg',
+        photo: '/aboutUsImages/Shristy.jpg',
         github: "https://github.com/Shristy46",
         linkedin: "https://www.linkedin.com/in/shristy-shreya-686562327/",
       },
@@ -274,6 +274,7 @@ export default function AboutUsPage() {
                     boxShadow: 8,
                     zIndex: 1,
                 },
+              border: '4px solid #004225'
             }}
               
             />
@@ -319,8 +320,8 @@ export default function AboutUsPage() {
                   src={leader.photo}
                   alt={leader.name}
                   sx={{ 
-                    width: 240, 
-                    height: 240, 
+                    width: 280, 
+                    height: 280, 
                     mr: { sm: 2 }, 
                     mb: { xs: 2, sm: 0 },
                     boxShadow: 3,
@@ -328,6 +329,7 @@ export default function AboutUsPage() {
                       boxShadow: 8,
                       zIndex: 1,
                     },
+                    border: '4px solid #004225'
                   }}
                 />
                 <Box>
