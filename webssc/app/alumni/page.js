@@ -74,7 +74,7 @@ export default function Alumni() {
               </h3>
               <p className="text-green-500 font-medium mb-2">{alumnus.role}</p>
               <p className="text-gray-500 italic text-center mb-4">
-                "{alumnus.quote}"
+                {alumnus.quote}
               </p>
               <a
                 href={alumnus.linkedin}

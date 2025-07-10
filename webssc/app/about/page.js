@@ -286,7 +286,7 @@ export default function AboutUsPage() {
               lineHeight: { xs: 1.5, sm: 1.6 },
             }}
           >
-            The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club's mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
+            The <b>Soft Skills Club</b> at NIT Jamshedpur is dedicated to nurturing essential soft skills and fostering all-round personality development among students. The club&apos;s mission is to promote empathy, integrity, and personal growth by organizing a variety of activities such as group discussions, debates, mock interviews, workshops on CV writing, creative writing sessions, and aptitude or puzzle-solving events.
           </Typography>
           <Typography
             variant="body1"
