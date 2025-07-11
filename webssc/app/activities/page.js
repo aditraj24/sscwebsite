@@ -53,8 +53,9 @@ export default function ThreeGalleriesPage() {
           >
             <Card
               sx={{
-                height: 460,
-                overflow: 'hidden',
+                
+                minheight: 400,
+                overflow: 'visible',
                 borderRadius: 4,
                 boxShadow: 8,
                 background: gallery.bg,
@@ -69,7 +70,7 @@ export default function ThreeGalleriesPage() {
 
                 <Box sx={{ width: '100%', height: 250, overflow: 'hidden' }}>
                   <motion.div
-                    style={{ display: 'flex', gap: 16 ,width:'100%' }}
+                    style={{ display: 'flex', gap: 16 ,width:'max-content' }}
                     animate={{ x: [0, -300, 0] }}
                     transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
                   >
@@ -79,7 +80,7 @@ export default function ThreeGalleriesPage() {
                         component={motion.div}
                         whileHover={{ scale: 1.08 }}
                         sx={{
-                          minWidth: 200,
+                          minWidth: {sx:160,sm:200},
                           height: 200,
                           position: 'relative',
                           borderRadius: 3,
