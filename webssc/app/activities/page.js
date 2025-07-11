@@ -6,7 +6,7 @@ import Image from 'next/image';
 const galleries = [
   {
     title: 'Naivete Fete',
-    description: 'Participants engaged in an interactive [activity type – e.g., Group Discussion/Extempore/Mock Interview/Public Speaking] where they explored real-world topics, received personalized feedback, and learned strategies to express their thoughts with confidence. The event also featured a short motivational talk by [Faculty/Guest Name if any], highlighting the growing need for emotional intelligence and teamwork in modern careers.',
+    description: 'Participants engaged in an interactive [activity type – e.g., Group Discussion/Extempore/Mock Interview/Public Speaking] where they explored real-world topics, received personalized feedback, and learned strategies to express their thoughts with confidence. Highlighting the growing need for emotional intelligence and teamwork in modern careers.',
     images: ['/gallery/fete1.jpg', '/gallery/fete2.jpg', '/gallery/fete3.jpg','/gallery/fetel4.jpg','/gallery/fete5.jpg'],
     bg: 'linear-gradient(to right, #FFDEE9, #B5FFFC)',
   },
@@ -18,7 +18,7 @@ const galleries = [
   },
   {
     title: 'Visioucue',
-    description: 'n this engaging session, participants were shown a thought-provoking image designed to spark curiosity and varied interpretations. Following a brief individual observation phase, attendees formed small groups to initiate open-ended discussions based on what they saw — exploring themes, emotions, context, and possible narratives behind the image.',
+    description: 'In this engaging session, participants were shown a thought-provoking image designed to spark curiosity .Following a brief individual observation phase, attendees formed small groups to initiate open-ended discussions based on what they saw —emotions, context, and possible narratives behind the image.',
     images: ['/gallery/creative1.jpg', '/gallery/creative2.jpg', '/gallery/creative3.jpg'],
     bg: 'linear-gradient(to right, #FFF6B7, #F6416C)',
   },
@@ -26,6 +26,22 @@ const galleries = [
 
 export default function ThreeGalleriesPage() {
   return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+  >
+    <Typography
+  variant="h4"
+  fontWeight={700}
+  textAlign="center"
+  gutterBottom
+  sx={{
+    mt: 4,
+    mb: 2,
+    color: '#333',
+    fontFamily: 'Montserrat, sans-serif',
+  }}
+>
+  ✨ Event Highlights
+</Typography>
     <Grid container spacing={4} sx={{ p: 4 }}>
       {galleries.map((gallery, i) => (
         <Grid item xs={12} md={4} key={i}>
@@ -87,5 +103,6 @@ export default function ThreeGalleriesPage() {
         </Grid>
       ))}
     </Grid>
+    </Box>
   );
 }
