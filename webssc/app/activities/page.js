@@ -1,120 +1,91 @@
+'use client';
+import { Grid, Card, CardContent, Typography, Box, Stack } from '@mui/material';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-// components/HeadOfDepartments.tsx
-"use client";
-import React from 'react';
-import { Container, Grid, Avatar, Typography, Card, CardContent,Box } from '@mui/material';
-import { Bold } from 'lucide-react';
-
-const topProfiles = [
+const galleries = [
   {
-    name: 'Naivete Fete',
-    title: ' First Event for Freshers',
-    description: 'Participants engaged in an interactive [activity type – e.g., Group Discussion/Extempore/Mock Interview/Public Speaking] where they explored real-world topics, received personalized feedback, and learned strategies to express their thoughts with confidence.  Highlighting the growing need for emotional intelligence and teamwork in modern careers.',
-    image: '/images/ayush.jpg',
-    
+    title: 'Naivete Fete',
+    description: 'Participants engaged in an interactive [activity type – e.g., Group Discussion/Extempore/Mock Interview/Public Speaking] where they explored real-world topics, received personalized feedback, and learned strategies to express their thoughts with confidence. The event also featured a short motivational talk by [Faculty/Guest Name if any], highlighting the growing need for emotional intelligence and teamwork in modern careers.',
+    images: ['/gallery/fete1.jpg', '/gallery/fete2.jpg', '/gallery/fete3.jpg','/gallery/fetel4.jpg','/gallery/fete5.jpg'],
+    bg: 'linear-gradient(to right, #FFDEE9, #B5FFFC)',
   },
   {
-    name: 'Group Discussion',
-    title: 'Enhancing the critical thinking',
-    description: 'The event provided a platform for participants to engage in thought-provoking group discussions on current affairs, social issues, and abstract topics. Students were divided into small groups and evaluated on key aspects such as clarity of thought, confidence, active listening, logical reasoning, and teamwork..',
-    image: '/images/sahil.jpg',
+    title: 'Group Discussion',
+    description: 'he event provided a platform for participants to engage in thought-provoking group discussions on current affairs, social issues, and abstract topics. Students were divided into small groups and evaluated on key aspects such as clarity of thought, confidence, active listening, logical reasoning, and teamwork..',
+    images: ['/gallery/leader1.jpg', '/gallery/leader2.jpg', '/gallery/leader3.jpg'],
+    bg: 'linear-gradient(to right, #D9AFD9, #97D9E1)',
   },
   {
-    name: 'Debate',
-    title: 'Battle of words',
-    description: 'his intellectually stimulating event not only encouraged healthy competition but also helped participants gain confidence in public speaking and learn the value of respectful disagreement — key elements of effective communication in any field.',
-    image: '/images/ankit.jpg',
+    title: 'Visioucue',
+    description: 'n this engaging session, participants were shown a thought-provoking image designed to spark curiosity and varied interpretations. Following a brief individual observation phase, attendees formed small groups to initiate open-ended discussions based on what they saw — exploring themes, emotions, context, and possible narratives behind the image.',
+    images: ['/gallery/creative1.jpg', '/gallery/creative2.jpg', '/gallery/creative3.jpg'],
+    bg: 'linear-gradient(to right, #FFF6B7, #F6416C)',
   },
 ];
 
-const bottomProfiles = [
-  {
-    name: 'Case Study Challenge',
-    title: 'Bridging theory and practice',
-    description: 'Event conducted in our technical fest Ojass by soft Skills Club',
-    image: '/images/pooja.jpg',
-  },
-  {
-    name: 'Visiocue',
-    title: 'Percieve discuss and pen down',
-    description: 'Event to develop both thinking and writing skill.',
-    image: '/images/rohan.jpg',
-  },
-];
-
-const cardStyles = {
-  backgroundColor: '#ffffff',
-  color: '#212121',
-  borderRadius: 3,
-  py: 3,
-  textAlign: 'center',
-  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  '&:hover': {
-    transform: 'scale(1.05)',
-    boxShadow: '0 4px 20px rgba(0, 255, 0, 0.4)',
-  },
-};
-
-const HeadOfDepartments = () => {
+export default function ThreeGalleriesPage() {
   return (
-    <Box sx={{ py: 5, backgroundColor: '#e8f5e9', background:'liner-gradient(to right,#f5f7fa,#c3cfe2)'}}>
-      <Typography variant="h4" align="center" gutterBottom  sx={{ color: '#1b5e20', fontWeight:'bold', textDecoration:'underline' }}>
-        Inside The Skillverse
-      </Typography>
-
-      {/* 🔼 Top Row */}
-      <Grid container spacing={4}>
-        {topProfiles.map((person, idx) => (
-          <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card sx={cardStyles}>
-              <Avatar
-                src={person.image}
-                alt={person.name}
-                sx={{ width: 200, height: 200, margin: 'auto', mb: 2 ,border: '4px solid #4caf50'}}
-              />
+    <Grid container spacing={4} sx={{ p: 4 }}>
+      {galleries.map((gallery, i) => (
+        <Grid item xs={12} md={4} key={i}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Card
+              sx={{
+                height: 460,
+                overflow: 'hidden',
+                borderRadius: 4,
+                boxShadow: 8,
+                background: gallery.bg,
+                color: 'black',
+              }}
+            >
               <CardContent>
-                <Typography variant="h6" sx={{ color: '#4caf50' }}>
-                  {person.name}
-                </Typography>
-                <Typography variant="subtitle2" sx={{ color: '#1b5e20' }}>
-                  {person.title}
-                </Typography>
-                <Typography variant="body2" sx={{ mt: 1 }}>
-                  {person.description}
-                </Typography>
+                <Stack spacing={1} mb={2}>
+                  <Typography variant="h6" fontWeight={700}>{gallery.title}</Typography>
+                  <Typography variant="body2">{gallery.description}</Typography>
+                </Stack>
+
+                <Box sx={{ width: '100%', height: 250, overflow: 'hidden' }}>
+                  <motion.div
+                    style={{ display: 'flex', gap: 16 ,width:'100%' }}
+                    animate={{ x: [0, -300, 0] }}
+                    transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+                  >
+                    {gallery.images.map((src, idx) => (
+                      <Box
+                        key={idx}
+                        component={motion.div}
+                        whileHover={{ scale: 1.08 }}
+                        sx={{
+                          minWidth: 200,
+                          height: 200,
+                          position: 'relative',
+                          borderRadius: 3,
+                          boxShadow: 4,
+                          overflow: 'hidden',
+                        }}
+                      >
+                        <Image
+                          src={src}
+                          alt={`${gallery.title} image ${idx + 1}`}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </Box>
+                    ))}
+                  </motion.div>
+                </Box>
               </CardContent>
             </Card>
-          </Grid>
-        ))}
-      </Grid>
-
-      {/* 🔽 Bottom Row */}
-      <Grid container spacing={4} justifyContent="center" sx={{ mt: 3 }}>
-        {bottomProfiles.map((person, idx) => (
-          <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card sx={cardStyles}>
-              <Avatar
-                src={person.image}
-                alt={person.name}
-                sx={{ width: 200, height: 200, margin: '0 auto', mb: 2, border:'4px solid #4caf50' }}
-              />
-              <CardContent>
-                <Typography variant="h6" sx={{ color: '#4caf50' }}>
-                  {person.name}
-                </Typography>
-                <Typography variant="subtitle2" sx={{ color: '#1b5e20' }}>
-                  {person.title}
-                </Typography>
-                <Typography variant="body2" sx={{ mt: 1 }}>
-                  {person.description}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+          </motion.div>
+        </Grid>
+      ))}
+    </Grid>
   );
-};
-
-export default HeadOfDepartments;
+}
