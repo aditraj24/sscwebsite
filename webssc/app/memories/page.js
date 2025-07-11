@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Memories() {
   const [selectedMemory, setSelectedMemory] = useState(null);
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
 
   // Sample memories data - you can replace with real data
   const memories = [
@@ -16,7 +15,7 @@ export default function Memories() {
       date: "March 15, 2024",
       time: "10:00 AM - 4:00 PM",
       venue: "Main Auditorium, NIT Jamshedpur",
-      organizer: "Prof. Dr. Rajesh Kumar",
+      organizer: "Prof. Dr. Rajeev Bhushan",
       image:
         "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
       description:
@@ -198,12 +197,6 @@ export default function Memories() {
   const carouselMemories = memories.slice(0, 3);
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
     // Auto-advance carousel
     const interval = setInterval(() => {
       setCurrentCarouselIndex((prev) => (prev + 1) % carouselMemories.length);
@@ -258,29 +251,8 @@ export default function Memories() {
     },
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B6B52] to-[#083D30]">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <div className="w-16 h-16 border-4 border-[#FFD8C2] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-[#0B6B52] font-semibold text-lg">
-            Loading Memories...
-          </p>
-        </motion.div>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0B6B52] to-[#083D30] relative overflow-hidden">
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FFD8C2]/20 via-[#FBC5C5]/20 to-[#0B6B52]/10 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+    <div className="min-h-screen bg-white relative overflow-hidden">
       <div className="relative z-10">
         {/* Hero Section */}
         <motion.div
@@ -289,17 +261,16 @@ export default function Memories() {
           transition={{ duration: 0.8 }}
           className="relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B6B52]/30 to-[#083D30]/30"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-5xl md:text-6xl font-bold text-white mb-6"
+                className="text-5xl md:text-6xl font-bold text-[#0B6B52] mb-6"
               >
                 Our{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD8C2] to-[#FBC5C5]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B6B52] to-[#083D30]">
                   Memories
                 </span>
               </motion.h1>
@@ -307,7 +278,7 @@ export default function Memories() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl text-[#FFD8C2] max-w-3xl mx-auto leading-relaxed"
+                className="text-xl text-[#083D30] max-w-3xl mx-auto leading-relaxed"
               >
                 Relive the moments that shaped our journey. From workshops to
                 competitions, every memory is a step towards personal and
@@ -324,7 +295,7 @@ export default function Memories() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#0B6B52] text-center mb-12">
             Featured Memories
           </h2>
 
@@ -443,7 +414,7 @@ export default function Memories() {
           animate="visible"
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#0B6B52] text-center mb-12">
             All Memories
           </h2>
 
