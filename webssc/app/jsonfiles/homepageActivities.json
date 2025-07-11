@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Debate",
+    "description": "Sharpen your argumentation skills in our structured debates where participants present opposing views on current topics. Each speaker gets 3 minutes to present their case, followed by rebuttals and open discussion.",
+    "rules": [
+      "Time limit: 3 minutes per speaker",
+      "No personal attacks allowed",
+      "Must cite credible sources",
+      "Judged on content, delivery, and rebuttals"
+    ],
+    "image": "/homepageImages/debate.jpg"
+  },
+  {
+    "name": "Lecturette",
+    "description": "Test your impromptu speaking abilities with our lecturette sessions. You'll receive a topic and have just 30 seconds to prepare before delivering a 3-minute informative talk.",
+    "rules": [
+      "Preparation time: 30 seconds",
+      "Speech duration: 3 minutes",
+      "Topics range from current affairs to abstract concepts",
+      "Judged on content, structure, and delivery"
+    ],
+    "image": "/homepageImages/lecturette.jpeg"
+  },
+  {
+    "name": "PPT Presentation",
+    "description": "Showcase your research and presentation skills through our PowerPoint competitions. Participants create and deliver professional presentations on assigned topics.",
+    "rules": [
+      "10-15 slides maximum",
+      "Time limit: 10 minutes",
+      "Must include references",
+      "Judged on content, design, and delivery"
+    ],
+    "image": "/homepageImages/ppt.png"
+  },
+  {
+    "name": "Story Narration",
+    "description": "Unleash your creativity in our story narration events where participants craft and deliver compelling stories based on prompts or pictures.",
+    "rules": [
+      "Preparation time: 1 minute",
+      "Story duration: 3-5 minutes",
+      "Can be fictional or based on real experiences",
+      "Judged on creativity, delivery, and audience engagement"
+    ],
+    "image": "/homepageImages/naration.jpg"
+  },
+  {
+    "name": "Personal Interviews",
+    "description": "Prepare for real-world scenarios with our mock interview sessions. Receive feedback on your communication skills, body language, and responses to challenging questions.",
+    "rules": [
+      "Duration: 15-20 minutes",
+      "Panel of 2-3 interviewers",
+      "Covers technical and HR questions",
+      "Feedback provided immediately after"
+    ],
+    "image": "/homepageImages/mockinterview2.jpg"
+  },
+  {
+    "name": "Writing",
+    "description": "Express yourself through our writing competitions featuring various formats including essays, short stories, poetry, and technical writing.",
+    "rules": [
+      "Time limit varies by competition (1-3 hours)",
+      "Word limits apply based on category",
+      "Original content only",
+      "Judged on creativity, structure, and language"
+    ],
+    "image": "/homepageImages/writing.png"
+  },
+  {
+    "name": "Group Discussions",
+    "description": "Develop your teamwork and leadership skills in our structured group discussions where participants debate topics and work toward consensus.",
+    "rules": [
+      "Groups of 6-8 participants",
+      "Duration: 15-20 minutes",
+      "No interrupting other speakers",
+      "Judged on contribution, leadership, and listening skills"
+    ],
+    "image": "/homepageImages/gd.jpg"
+  },
+  {
+    "name": "PPDT",
+    "description": "Picture Perception and Discussion Test challenges participants to create stories from ambiguous images and then discuss them as a group.",
+    "rules": [
+      "1 minute to study the picture",
+      "4 minutes to write your story",
+      "15 minutes group discussion",
+      "Judged on perception, narration, and discussion skills"
+    ],
+    "image": "/homepageImages/ppdt.png"
+  },
+  {
+    "name": "Quiz",
+    "description": "Test your knowledge across various domains in our quiz competitions featuring rapid-fire rounds, buzzer rounds, and visual rounds.",
+    "rules": [
+      "Teams of 2-4 members",
+      "Multiple rounds with different formats",
+      "No electronic devices allowed",
+      "Judged on accuracy and speed"
+    ],
+    "image": "/homepageImages/quiz.jpg"
+  }
+]

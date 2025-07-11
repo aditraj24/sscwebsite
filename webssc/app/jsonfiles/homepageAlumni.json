@@ -1,0 +1,44 @@
+[
+  {
+    "name": "SaiKiran Gummuluri",
+    "role": "Engg. Management, Apple",
+    "image": "/homepageImages/saikiran.jpg",
+    "linkedin": "https://linkedin.com/in/saikirangummuluri",
+    "quote": "SSC gave me the confidence to lead global teams."
+  },
+  {
+    "name": "Priyasha Singh",
+    "role": "Software Engineer, Oracle",
+    "image": "/homepageImages/priyasha.jpg",
+    "linkedin": "https://linkedin.com/in/priyashasingh",
+    "quote": "The teamwork & spirit of our club shaped my career."
+  },
+  {
+    "name": "Nitish Ranjan",
+    "role": "VP Operations and Expansion-MarketLeap, Ex. Amazon",
+    "image": "/homepageImages/nitish.jpg",
+    "linkedin": "https://linkedin.com/in/nitish-ranjan-18727035",
+    "quote": "Communication skills I learned here changed my life."
+  },
+  {
+    "name": "Nilanjan Sharma",
+    "role": "Project Manager, TATA Hitachi",
+    "image": "/homepageImages/nilanjan.jpg",
+    "linkedin": "https://linkedin.com/in/nilanjan-sharma-199ab221",
+    "quote": "SSC taught me to think outside the box."
+  },
+  {
+    "name": "Sonal Raj",
+    "role": "VP & Head, Data Engineering & Research, High Frequency Trading",
+   "image": "/homepageImages/sonal.jpg",
+    "linkedin": "https://linkedin.com/in/sonalraj",
+    "quote": "Networking at SSC opened doors for me."
+  },
+  {
+    "name": "Ankita Singh",
+    "role": "Software Developer-3, Oracle",
+    "image": "/homepageImages/ankita.jpg",
+    "linkedin": "https://linkedin.com/in/ankita-singh-b130b287",
+    "quote": "Empathy and leadership are gifts of SSC to me."
+  }
+]
