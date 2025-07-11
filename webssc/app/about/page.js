@@ -35,6 +35,18 @@ const leadership = [
     photo: "/aboutUsImages/VP.jpg",
     bio: "Supporting club initiatives and fostering team collaboration.",
   },
+  {
+    name: "Amarjeet Ahuja",
+    role: "Vice President",
+    photo: "/aboutUsImages/AmarjeetSir.jpg",
+    bio: "Supporting club initiatives and fostering team collaboration.",
+  },
+  {
+    name: "Sanaya Singh",
+    role: "Vice President",
+    photo: "/aboutUsImages/SanayaMam.jpg",
+    bio: "Supporting club initiatives and fostering team collaboration.",
+  },
 ];
 
 const teams = [
@@ -140,6 +152,13 @@ const teams = [
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
+      {
+        name: "Ishika Gupta",
+        role: "Social Media Head",
+        photo: "/aboutUsImages/IshikaMam.jpg",
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
     ],
   },
   {
@@ -156,6 +175,13 @@ const teams = [
         name: "Shristi Suman",
         role: "Coordinator",
         photo: "/aboutUsImages/ShristiMam.jpg",
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: "Sri Lineesha",
+        role: "Coordinator",
+        photo: "/aboutUsImages/SriMam.jpg",
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
