@@ -53,13 +53,14 @@ export default function ThreeGalleriesPage() {
           >
             <Card
               sx={{
-                
+                height:'auto',
                 minheight: 400,
                 overflow: 'visible',
                 borderRadius: 4,
                 boxShadow: 8,
                 background: gallery.bg,
                 color: 'black',
+                p:2,
               }}
             >
               <CardContent>
@@ -68,7 +69,7 @@ export default function ThreeGalleriesPage() {
                   <Typography variant="body2">{gallery.description}</Typography>
                 </Stack>
 
-                <Box sx={{ width: '100%', height: 250, overflow: 'hidden' }}>
+                <Box sx={{ width: '100%', height: 250, overflow: 'hidden', maxWidth:'100vh'}}>
                   <motion.div
                     style={{ display: 'flex', gap: 16 ,width:'max-content' }}
                     animate={{ x: [0, -300, 0] }}
@@ -102,8 +103,64 @@ export default function ThreeGalleriesPage() {
             </Card>
           </motion.div>
         </Grid>
+        
+      
       ))}
-    </Grid>
-    </Box>
-  );
-}
+
+  
+    
+    
+
+</Grid>
+  
+  <Box
+    component={motion.div}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    sx={{
+      mt: 10,
+      py: 6,
+      px: 3,
+      textAlign: 'center',
+      background: 'linear-gradient(to right, #D9AFD9, #97D9E1)',
+      borderRadius: 6,
+      boxShadow: '0 0 30px rgba(0,0,0,0.08)',
+    }}
+  >
+    <Typography
+      variant="h5"
+      fontWeight={600}
+      sx={{
+        letterSpacing: 1,
+        color: '#3B3B3B',
+        mb: 2,
+        fontSize: { xs: '1.5rem', sm: '2rem' },
+        textTransform: 'uppercase',
+      }}
+    >
+      Upcoming Events
+    </Typography>
+
+    <Typography
+      variant="h2"
+      fontWeight={900}
+      sx={{
+        textTransform: 'uppercase',
+        letterSpacing: 3,
+        color: '#222',
+        fontSize: { xs: '2.8rem', sm: '3.5rem' },
+        fontFamily: 'Orbitron, sans-serif',
+        background: 'linear-gradient(to right, #ff4e50, #f9d423)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+      }}
+    >
+      To Be Notified
+    </Typography>
+  </Box>
+;
+
+
+  </Box>
+  )}
