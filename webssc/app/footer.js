@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-gray-200 leading-relaxed">
               NIT Jamshedpur <br />
-              Empowering students since 2012
+              Empowering students since 2007
             </p>
             <div className="mt-4 flex items-center gap-3">
               <motion.div
