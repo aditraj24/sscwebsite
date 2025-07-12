@@ -42,6 +42,7 @@ export default function ThreeGalleriesPage() {
 >
   ✨ Event Highlights
 </Typography>
+  
     <Grid container spacing={4}  sx={{ p: 4 }}>
       {galleries.map((gallery, i) => (
         <Grid item xs={12} md={4} sm={8} key={i}>
@@ -82,44 +83,38 @@ export default function ThreeGalleriesPage() {
 
 >{gallery.description}</Typography>
                 </Stack>
-                <Box sx={{ width: '100%', overflowX: 'auto', py: 2 }}>
-  <Box
-    component={motion.div}
-    style={{
-      display: 'flex',
-      gap: 16,
-      width: 'max-content',       // Ensures container expands to fit all images
-      flexWrap: 'nowrap',
-    }}
-    animate={{ x: [0, -300, 0] }}
-    transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-  >
-    {gallery.images.map((src, idx) => (
-      <Box
-        key={idx}
-        component={motion.div}
-        whileHover={{ scale: 1.08 }}
-        sx={{
-          minWidth: { xs: 140, sm: 180, md: 200 }, // Responsive size
-          height: { xs: 160, sm: 180, md: 200 },
-          position: 'relative',
-          borderRadius: 3,
-          boxShadow: 4,
-          overflow: 'hidden',
-          flexShrink: 0,                          // Prevent squishing in flex
-        }}
-      >
-        <Image
-          src={src}
-          alt={`${gallery.title} image ${idx + 1}`}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
-      </Box>
-    ))}
-  </Box>
+                <Box
+  sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 2,
+    alignItems: 'center',
+    width: '100%',
+    px: { xs: 2, sm: 4, md: 6 },
+  }}
+>
+  {gallery.images.map((src, idx) => (
+    <Box
+      key={idx}
+      sx={{
+        width: '100%',
+        maxWidth: 600,
+        height: { xs: 180, sm: 240, md: 280 },
+        position: 'relative',
+        borderRadius: 3,
+        overflow: 'hidden',
+        boxShadow: 3,
+      }}
+    >
+      <Image
+        src={src}
+        alt={`${gallery.title} image ${idx + 1}`}
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    </Box>
+  ))}
 </Box>
-               
 
           
                           
