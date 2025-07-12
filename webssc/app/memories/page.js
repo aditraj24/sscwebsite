@@ -109,7 +109,7 @@ export default function Memories() {
       venue: "Innovation Lab, Department of CSE",
       organizer: "Dr. Sanjay Kumar",
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+        "/memoriesimages/10.jpg",
       description:
         "Students engaged in innovative problem-solving challenges, developing critical thinking and creativity skills.",
       longDescription:
@@ -139,7 +139,7 @@ export default function Memories() {
       venue: "Open Air Theater, NIT Jamshedpur",
       organizer: "Prof. Lakshmi Devi",
       image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
+        "/memoriesimages/8.jpg",
       description:
         "A celebration of diversity through cultural exchange, promoting understanding and collaboration among students.",
       longDescription:
@@ -170,7 +170,7 @@ export default function Memories() {
       venue: "Placement Cell, NIT Jamshedpur",
       organizer: "Dr. Priya Sharma",
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+        "/memoriesimages/9.jpg",
       description:
         "Students practiced interview skills with industry professionals, gaining valuable feedback and confidence.",
       longDescription:
