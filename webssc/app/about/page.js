@@ -620,6 +620,7 @@ export default function AboutUsPage() {
                           minHeight: "350px",
                           px: 2,
                           boxShadow: 3,
+                          borderRadius: 5,
                           background:
                             "linear-gradient(to bottom right, #0B6B52, #083D30)",
                           color: "white",
