@@ -11,13 +11,13 @@ export default function Memories() {
   const memories = [
     {
       id: 1,
-      title: "Leadership Workshop 2024",
-      date: "March 15, 2024",
+      title: "Naivete Fete 2024",
+      date: "August 15, 2024",
       time: "10:00 AM - 4:00 PM",
-      venue: "Main Auditorium, NIT Jamshedpur",
+      venue: "DJLHC, NIT Jamshedpur",
       organizer: "Prof. Dr. Rajeev Bhushan",
       image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
+        "/memoriesimages/m1.jpg",
       description:
         "An inspiring workshop where students learned essential leadership skills through interactive sessions and team-building activities. The event featured renowned speakers from the industry who shared their experiences and insights on effective leadership in the modern workplace.",
       longDescription:
@@ -26,7 +26,7 @@ export default function Memories() {
       participants: 45,
       tags: ["Leadership", "Team Building", "Skills Development"],
       images: [
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
+        "/memoriesimages/m1.jpg",
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
@@ -48,7 +48,7 @@ export default function Memories() {
       venue: "Seminar Hall 1, Academic Block",
       organizer: "Dr. Meera Patel",
       image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+        "/memoriesimages/m2.jpg",
       description:
         "Students showcased their oratory skills in a competitive environment, building confidence and communication abilities.",
       longDescription:
@@ -78,7 +78,7 @@ export default function Memories() {
       venue: "Conference Center, NIT Jamshedpur",
       organizer: "Prof. Amit Singh",
       image:
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
+        "/memoriesimages/m3.jpg",
       description:
         "A networking event connecting students with industry professionals to understand real-world soft skills requirements.",
       longDescription:
