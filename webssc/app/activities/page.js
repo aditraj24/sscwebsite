@@ -7,26 +7,26 @@ const galleries = [
   {
     title: 'Naivete Fete',
     description: 'Participants engaged in an interactive [activity type – e.g., Group Discussion/Extempore/Mock Interview/Public Speaking] where they explored real-world topics, received personalized feedback, and learned strategies to express their thoughts with confidence. Highlighting the growing need for emotional intelligence and teamwork in modern careers.',
-    images: ['/gallery/fete1.jpg', '/gallery/fete2.jpg', '/gallery/fete3.jpg','/gallery/fetel4.jpg','/gallery/fete5.jpg'],
+    images: ['/sscpics/nv.jpeg', '/sscpics/nv2.jpeg', '/ssc2/nv4.jpeg'],
     bg: 'linear-gradient(to right, #FFDEE9, #B5FFFC)',
   },
   {
     title: 'Group Discussion',
     description: 'he event provided a platform for participants to engage in thought-provoking group discussions on current affairs, social issues, and abstract topics. Students were divided into small groups and evaluated on key aspects such as clarity of thought, confidence, active listening, logical reasoning, and teamwork..',
-    images: ['/gallery/leader1.jpg', '/gallery/leader2.jpg', '/gallery/leader3.jpg'],
+    images: ['/sscpics/gd.jpeg', '/gdimage/pic.jpeg', '/sscpics/gd3.jpeg'],
     bg: 'linear-gradient(to right, #D9AFD9, #97D9E1)',
   },
   {
     title: 'Visioucue',
     description: 'In this engaging session, participants were shown a thought-provoking image designed to spark curiosity .Following a brief individual observation phase, attendees formed small groups to initiate open-ended discussions based on what they saw —emotions, context, and possible narratives behind the image.',
-    images: ['/gallery/creative1.jpg', '/gallery/creative2.jpg', '/gallery/creative3.jpg'],
+    images: ['/ssc2/vc1.jpeg', '/ssc2/vc2.jpeg'],
     bg: 'linear-gradient(to right, #FFF6B7, #F6416C)',
   },
 ];
 
 export default function ThreeGalleriesPage() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' ,width:'100%'}}
   >
     <Typography
   variant="h4"
@@ -42,20 +42,27 @@ export default function ThreeGalleriesPage() {
 >
   ✨ Event Highlights
 </Typography>
-    <Grid container spacing={4} sx={{ p: 4 }}>
+    <Grid container spacing={4}  sx={{ p: 4 }}>
       {galleries.map((gallery, i) => (
-        <Grid item xs={12} md={4} key={i}>
+        <Grid item xs={12} md={4} sm={8} key={i}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: i * 0.2 }}
             viewport={{ once: true }}
           >
+
+
+            
+          
             <Card
               sx={{
                 height:'auto',
                 minheight: 400,
-                overflow: 'visible',
+                display:'flex',
+               // overflow: 'hidden',
+               flexDirection:'column',
+               justifyContent:'space-between',
                 borderRadius: 4,
                 boxShadow: 8,
                 background: gallery.bg,
@@ -65,40 +72,57 @@ export default function ThreeGalleriesPage() {
             >
               <CardContent>
                 <Stack spacing={1} mb={2}>
-                  <Typography variant="h6" fontWeight={700}>{gallery.title}</Typography>
-                  <Typography variant="body2">{gallery.description}</Typography>
-                </Stack>
+                  <Typography variant="h6" fontWeight={700} sx={{fontSize: { xs: '1.2rem', md: '1.5rem' }, mb: 1
+}}>{gallery.title}</Typography>
+                  <Typography variant="body2" sx={{
+    fontSize: { xs: '0.9rem', md: '1rem' },
+    mb: 2,
+    textAlign: 'justify',
+  }}
 
-                <Box sx={{ width: '100%', height: 250, overflow: 'hidden', maxWidth:'100vh'}}>
-                  <motion.div
-                    style={{ display: 'flex', gap: 16 ,width:'max-content' }}
-                    animate={{ x: [0, -300, 0] }}
-                    transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-                  >
-                    {gallery.images.map((src, idx) => (
-                      <Box
-                        key={idx}
-                        component={motion.div}
-                        whileHover={{ scale: 1.08 }}
-                        sx={{
-                          minWidth: {sx:160,sm:200},
-                          height: 200,
-                          position: 'relative',
-                          borderRadius: 3,
-                          boxShadow: 4,
-                          overflow: 'hidden',
-                        }}
-                      >
-                        <Image
-                          src={src}
-                          alt={`${gallery.title} image ${idx + 1}`}
-                          fill
-                          style={{ objectFit: 'cover' }}
-                        />
-                      </Box>
-                    ))}
-                  </motion.div>
-                </Box>
+>{gallery.description}</Typography>
+                </Stack>
+                <Box sx={{ width: '100%', overflowX: 'auto', py: 2 }}>
+  <Box
+    component={motion.div}
+    style={{
+      display: 'flex',
+      gap: 16,
+      width: 'max-content',       // Ensures container expands to fit all images
+      flexWrap: 'nowrap',
+    }}
+    animate={{ x: [0, -300, 0] }}
+    transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+  >
+    {gallery.images.map((src, idx) => (
+      <Box
+        key={idx}
+        component={motion.div}
+        whileHover={{ scale: 1.08 }}
+        sx={{
+          minWidth: { xs: 140, sm: 180, md: 200 }, // Responsive size
+          height: { xs: 160, sm: 180, md: 200 },
+          position: 'relative',
+          borderRadius: 3,
+          boxShadow: 4,
+          overflow: 'hidden',
+          flexShrink: 0,                          // Prevent squishing in flex
+        }}
+      >
+        <Image
+          src={src}
+          alt={`${gallery.title} image ${idx + 1}`}
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </Box>
+    ))}
+  </Box>
+</Box>
+               
+
+          
+                          
               </CardContent>
             </Card>
           </motion.div>
