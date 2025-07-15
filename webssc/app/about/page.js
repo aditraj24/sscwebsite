@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
   Box,
   Typography,
@@ -12,7 +13,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn, MenuBook } from "@mui/icons-material";
 
 // Sample data
 const professor = {
@@ -362,6 +363,60 @@ export default function AboutUsPage() {
               Club aims to bring out the best in every student and equip them
               with the confidence and abilities needed for both campus life and
               future careers.
+            </Typography>
+          </Box>
+        </motion.div>
+
+        {/* Literary Works Button */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <Box sx={{ mb: 6, textAlign: "center" }}>
+            <Link href="/literary" style={{ textDecoration: "none" }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Box
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 2,
+                    px: 4,
+                    py: 2.5,
+                    borderRadius: 3,
+                    background: "linear-gradient(135deg, #0B6B52 0%, #FF7F50 100%)",
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
+                    boxShadow: 3,
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      boxShadow: 6,
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  <MenuBook style={{ fontSize: "1.5rem" }} />
+                  Explore Literary Works
+                </Box>
+              </motion.div>
+            </Link>
+            <Typography
+              variant="body2"
+              sx={{
+                mt: 2,
+                color: "text.secondary",
+                fontSize: { xs: "0.9rem", sm: "1rem" },
+                maxWidth: "600px",
+                mx: "auto",
+              }}
+            >
+              Discover creative expressions and insights from our talented team members
             </Typography>
           </Box>
         </motion.div>
