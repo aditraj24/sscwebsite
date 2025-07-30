@@ -1,44 +1,30 @@
 [
   {
-    "name": "Aman Kumar",
-    "role": "Software Engineer, Google",
-    "image": "/alumni/aman.jpg",
-    "linkedin": "https://linkedin.com/in/amankumar",
-    "quote": "SSC gave me the confidence to lead global teams."
+    "name": "Vishal Jha",
+    "role": "Senior Project Manager, ADP",
+    "image": "https://ik.imagekit.io/ijuiklevk/hihi.png",
+    "linkedin": "https://www.linkedin.com/in/jhavishal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "quote": "SSC at NIT Jamshedpur gave me skills vital for my Project Manager role."
   },
   {
-    "name": "Shreya Patel",
-    "role": "UX Designer, Microsoft",
-    "image": "/alumni/shreya.jpg",
-    "linkedin": "https://linkedin.com/in/shreyapatel",
-    "quote": "The teamwork & spirit of our club shaped my career."
+    "name": "Amarnath Mukherjee",
+    "role": "Head Primary Steelmaking, LD#1, Tata Steel",
+    "image": "https://ik.imagekit.io/ijuiklevk/bye%20bye.png",
+    "linkedin": "https://www.linkedin.com/in/amarnath-mukherjee-02138713?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "quote": "SSC helped me overcome my fear of public speaking and boosted my confidence."
   },
   {
-    "name": "Raj Malhotra",
-    "role": "Public Speaker & Author",
-    "image": "/alumni/raj.jpg",
-    "linkedin": "https://linkedin.com/in/rajmalhotra",
-    "quote": "Communication skills I learned here changed my life."
+    "name": "Nilanjan Sharma",
+    "role": "Division Manager, Tata Hitachi",
+    "image": "https://ik.imagekit.io/ijuiklevk/9dfe0dd3-9568-4600-ba0f-01766337b8ce.jpg",
+    "linkedin": "https://www.linkedin.com/in/nilanjan-sharma-199ab221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "quote": "An NIT Jamshedpur alumnus credits the Soft Skills Club for shaping his journey to Project Manager at Tata Hitachi"
   },
   {
-    "name": "Priya Singh",
-    "role": "Product Manager, Amazon",
-    "image": "/alumni/priya.jpg",
-    "linkedin": "https://linkedin.com/in/priyasingh",
-    "quote": "SSC taught me to think outside the box."
-  },
-  {
-    "name": "Vikram Joshi",
-    "role": "Data Scientist, Facebook",
-    "image": "/alumni/vikram.jpg",
-    "linkedin": "https://linkedin.com/in/vikramjoshi",
-    "quote": "Networking at SSC opened doors for me."
-  },
-  {
-    "name": "Anjali Mehra",
-    "role": "HR Lead, Infosys",
-    "image": "/alumni/anjali.jpg",
-    "linkedin": "https://linkedin.com/in/anjalimehra",
-    "quote": "Empathy and leadership are gifts of SSC to me."
+    "name": "Neha",
+    "role": "Director, Standard Chartered Bank (Batch: 2005-2009)",
+    "image": "https://ik.imagekit.io/ijuiklevk/WhatsApp%20Image%202025-07-30%20at%205.10.45%20PM.jpeg",
+    "linkedin": "https://www.linkedin.com/in/nehasa10?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "quote": "Early soft skills training shaped my career—experiment, invest, and grow."
   }
 ]
