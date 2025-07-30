@@ -117,7 +117,7 @@ export default function LaunchPage({ onLaunch }) {
             transition={{ duration: 1, delay: 1 }}
             className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            🎉 We're excited to unveil our brand new website! Join us on this journey of 
+            🎉 We&aposre excited to unveil our brand new website! Join us on this journey of 
             communication.
           </motion.p>
 
