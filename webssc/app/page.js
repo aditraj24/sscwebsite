@@ -5,6 +5,7 @@ import { Mail, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 import alumniData from "./jsonfiles/homepageAlumni.json";
 import activitiesData from "./jsonfiles/homepageActivities.json";
 import Link from "next/link";
+import LaunchPage from "./launch";
 
 const images = [
   "/homepageImages/memory1.jpeg",
@@ -18,6 +19,16 @@ const images = [
 export default function Home() {
   const [selectedActivity, setSelectedActivity] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showLaunchPage, setShowLaunchPage] = useState(true);
+
+  const handleLaunch = () => {
+    setShowLaunchPage(false);
+  };
+
+  if (showLaunchPage) {
+    return <LaunchPage onLaunch={handleLaunch} />;
+  }
+
   return (
     <>
       {/* Hero Section */}
