@@ -23,6 +23,8 @@ export default function Home() {
 
   const handleLaunch = () => {
     setShowLaunchPage(false);
+    // Dispatch event to notify layout that launch is complete
+    window.dispatchEvent(new Event('launchComplete'));
   };
 
   if (showLaunchPage) {
