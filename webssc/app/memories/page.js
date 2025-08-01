@@ -11,6 +11,38 @@ export default function Memories() {
   const memories = [
     {
       id: 1,
+      title: "Interactive session with ASHISH AKSHAT (TOPPER) CIVIL Services (JPSC), 2025",
+      date: "July 30, 2025",
+      time: "6:30 PM - 8:30 PM",
+      venue: "DJLHC, NIT Jamshedpur",
+      organizer: "Prof. Dr. Rajeev Bhushan",
+      image:
+        "/eventJPSC/image1.jpg",
+      description:
+        "An inspiring session where students learned valuable insights from ASHISH AKSHAT SIR.",
+      longDescription:
+        "The interactive session with ASHISH AKSHAT SIR was a 2 hour event organised to celebrate his success in civil services (JPSC) 2025. The session began with an introduction by the Director of NIT Jamshedpur, followed by a motivational speech by ASHISH AKSHAT SIR.\n\nKey highlights included:\n- Personal journey and challenges faced during preparation\n- Tips and strategies for effective study techniques\n- Interactive Q&A session with students\n- Team building exercises to enhance leadership skills\n- Certificate distribution ceremony for participants\n\nStudents participated in various activities including group discussions, leadership simulations, and networking opportunities. The event concluded with a panel discussion featuring successful alumni who shared their experiences and provided valuable career advice.",
+      category: "Workshop",
+      participants: 100,
+      tags: ["Leadership", "Team Building", "Skills Development"],
+      images: [
+        "/eventJPSC/image1.jpg",
+        "/eventJPSC/image2.jpg",
+        "/eventJPSC/image3.jpg",
+        "/eventJPSC/image4.jpg",
+        "/eventJPSC/image5.jpg",
+      ],
+      highlights: [
+        "Interactive leadership guidance",
+        "SSC Websiite launch",
+        "Team building exercises",
+        "Certificate distribution",
+      ],
+      feedback:
+        "The session was incredibly insightful and practical. I learned valuable knowledge that I can apply in my career. - Anoop Burnwal, 2nd Year ECM",
+    },
+    {
+      id: 2,
       title: "Naivete Fete 2024",
       date: "August 15, 2024",
       time: "10:00 AM - 4:00 PM",
@@ -41,7 +73,7 @@ export default function Memories() {
         "The workshop was incredibly insightful and practical. I learned valuable skills that I can apply in my career. - Priya Sharma, 3rd Year CSE",
     },
     {
-      id: 2,
+      id: 3,
       title: "Public Speaking Competition",
       date: "February 28, 2024",
       time: "2:00 PM - 6:00 PM",
@@ -71,7 +103,7 @@ export default function Memories() {
         "This competition helped me overcome my fear of public speaking and improved my confidence significantly. - Rahul Verma, 2nd Year ECE",
     },
     {
-      id: 3,
+      id: 4,
       title: "Industry Connect Meet",
       date: "January 20, 2024",
       time: "9:00 AM - 5:00 PM",
@@ -102,7 +134,7 @@ export default function Memories() {
         "This event opened my eyes to industry expectations and helped me understand what skills I need to develop. - Anjali Gupta, 4th Year ME",
     },
     {
-      id: 4,
+      id: 5,
       title: "Creative Problem Solving",
       date: "December 10, 2023",
       time: "11:00 AM - 3:00 PM",
@@ -132,7 +164,7 @@ export default function Memories() {
         "This workshop completely changed my approach to problem-solving. I now think more creatively and systematically. - Vikram Singh, 3rd Year CSE",
     },
     {
-      id: 5,
+      id: 6,
       title: "Cultural Exchange Program",
       date: "November 25, 2023",
       time: "6:00 PM - 10:00 PM",
@@ -163,7 +195,7 @@ export default function Memories() {
         "This event helped me understand and appreciate the rich cultural diversity of our country. - Meera Patel, 2nd Year CE",
     },
     {
-      id: 6,
+      id: 7,
       title: "Mock Interview Sessions",
       date: "October 15, 2023",
       time: "10:00 AM - 2:00 PM",
