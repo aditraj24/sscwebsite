@@ -119,6 +119,20 @@ const teams = [
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
       {
+        name: "Nihal Sahay",
+        role: "Logistics Head",
+        photo: "/aboutUsImages/NihalSir.jpg",
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
+        name: "Harsh Vardhan",
+        role: "Logistics Head",
+        photo: "/aboutUsImages/harshSir.jpg",
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      },
+      {
         name: "Jay Prakash",
         role: "Hospitality Head",
         photo: "/aboutUsImages/JpSir.jpg",
