@@ -128,7 +128,7 @@ const teams = [
       {
         name: "Harsh Vardhan",
         role: "Logistics Head",
-        photo: "/aboutUsImages/harshSir.jpg",
+        photo: "/aboutUsImages/HarshVardhanSir.jpg",
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
       },
