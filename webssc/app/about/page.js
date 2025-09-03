@@ -48,21 +48,35 @@ const leadership = [
     photo: "/aboutUsImages/SanayaMam.jpg",
     bio: "Supporting club initiatives and fostering team collaboration.",
   },
-];
-
-const teams = [
   {
-    name: "General Secretary",
-    members: [
-      {
+        name: "Anshu Raj",
+        role: "Associate Vice President",
+        photo: "/aboutUsImages/AnshuSir.jpg",
+        github: "https://github.com/Anoopkr1906",
+        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+  },
+  {
         name: "Satwik Pal",
-        role: "General Sec.",
+        role: "Associate Vice President",
         photo: "/aboutUsImages/GenSec.jpg",
         github: "https://github.com/Anoopkr1906",
         linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
-      },
-    ],
   },
+];
+
+const teams = [
+  // {
+  //   name: "General Secretary",
+  //   members: [
+  //     {
+  //       name: "Satwik Pal",
+  //       role: "General Sec.",
+  //       photo: "/aboutUsImages/GenSec.jpg",
+  //       github: "https://github.com/Anoopkr1906",
+  //       linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+  //     },
+  //   ],
+  // },
   {
     name: "Joint Secretaries",
     members: [
