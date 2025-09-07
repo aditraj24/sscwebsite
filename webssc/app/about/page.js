@@ -80,13 +80,13 @@ const teams = [
   {
     name: "Joint Secretaries",
     members: [
-      {
-        name: "Anshu Raj",
-        role: "Joint Sec.",
-        photo: "/aboutUsImages/AnshuSir.jpg",
-        github: "https://github.com/Anoopkr1906",
-        linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
-      },
+      // {
+      //   name: "Anshu Raj",
+      //   role: "Joint Sec.",
+      //   photo: "/aboutUsImages/AnshuSir.jpg",
+      //   github: "https://github.com/Anoopkr1906",
+      //   linkedin: "https://www.linkedin.com/in/anoop-kumar-burnwal-1906/",
+      // },
       {
         name: "Sakshi Kumari",
         role: "Joint Sec.",
