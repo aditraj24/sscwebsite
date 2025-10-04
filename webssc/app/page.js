@@ -275,7 +275,7 @@ export default function Home() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Naivete Fete'25
+            Naivete Fete{$apos}25
           </Typography>
           <Typography
             variant="h5"
