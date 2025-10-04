@@ -1,4 +1,5 @@
 "use client";
+import { Grid, Card, CardContent, Typography, Box, Stack } from "@mui/material";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
@@ -227,6 +228,81 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
+      </section>
+      {/* upcoming events */}
+      <section>
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          sx={{
+            mt: 10,
+            py: 6,
+            px: 3,
+            textAlign: "center",
+            background: "linear-gradient(to right, #D9AFD9, #97D9E1)",
+            borderRadius: 6,
+            boxShadow: "0 0 30px rgba(0,0,0,0.08)",
+          }}
+        >
+          <Typography
+            variant="h5"
+            fontWeight={600}
+            sx={{
+              letterSpacing: 1,
+              color: "#0B6B52",
+              mb: 2,
+              fontSize: { xs: "1.5rem", sm: "2rem" },
+              textTransform: "uppercase",
+            }}
+          >
+            Upcoming Events
+          </Typography>
+
+          <Typography
+            variant="h2"
+            fontWeight={900}
+            sx={{
+              textTransform: "uppercase",
+              letterSpacing: 3,
+              color: "#222",
+              fontSize: { xs: "2.8rem", sm: "3.5rem" },
+              fontFamily: "Orbitron, sans-serif",
+              background: "linear-gradient(to right, #ff4e50, #f9d423)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Naivete Fete'25
+          </Typography>
+          <Typography
+            variant="h5"
+            fontWeight={600}
+            sx={{
+              letterSpacing: 1,
+              color: "#3B3B3B",
+              mb: 2,
+              fontSize: { xs: "1.5rem", sm: "2rem" },
+              textTransform: "uppercase",
+            }}
+          >
+            6th - 11th October At DJLHC
+          </Typography>
+          <Typography
+            variant="h5"
+            fontWeight={600}
+            sx={{
+              letterSpacing: 1,
+              color: "#3B3B3B",
+              mb: 2,
+              fontSize: { xs: "1rem", sm: "1.5rem" },
+              // textTransform: "uppercase",
+            }}
+          >
+            Fun Events | Case Study | Group Discussion | Debate | Creative Writing | Mock Interview | Naivete Fete Nite
+          </Typography>
+        </Box>
       </section>
       {/* About Section */}
       <section
