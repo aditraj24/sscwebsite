@@ -176,7 +176,7 @@ export default function ThreeGalleriesPage() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Naivete Fete{$apos}25
+          Naivete Fete&apos;25
         </Typography>
         <Typography
           variant="h5"
