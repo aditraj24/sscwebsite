@@ -19,6 +19,7 @@ const images = [
 export default function Home() {
   const [selectedActivity, setSelectedActivity] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <>
       {/* Hero Section */}
