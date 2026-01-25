@@ -33,7 +33,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About Us", path: "/about" },
+    // { name: "About Us", path: "/about" },
     { name: "Activities", path: "/activities" },
     { name: "Memories", path: "/memories" },
     { name: "Alumni", path: "/alumni" },
