@@ -104,8 +104,10 @@ export default function Navbar() {
                 initial="hidden"
                 animate="show"
                 variants={containerVariants}
-                onMouseEnter={() => setHoveredLink(index)}
-                onMouseLeave={() => setHoveredLink(null)}
+                // onMouseEnter={() => setHoveredLink(index)}
+                // onMouseLeave={() => setHoveredLink(null)}
+                  onMouseEnter={() => setHoveredLink(link.path)}
+                  onMouseLeave={() => setHoveredLink(null)}
                 className="relative"
               >
                 <Link
@@ -123,7 +125,7 @@ export default function Navbar() {
                   {link.name}
                 </Link>
 
-                {hoveredLink === index && (
+                {hoveredLink === link.path && (
                   <motion.div
                     layoutId="navHover"
                     className="absolute inset-0 bg-[#FF7F50]/20 rounded-md"
