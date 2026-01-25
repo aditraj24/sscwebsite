@@ -34,10 +34,10 @@ export default function Navbar() {
 
   const navLinks = [
     // { name: "About Us", path: "/about" },
-    { name: "Activities", path: "/activities" },
-    { name: "Memories", path: "/memories" },
-    { name: "Alumni", path: "/alumni" },
-    { name: "Contact Us", path: "/contact" },
+    { id: "activities", name: "Activities", path: "/activities" },
+    { id: "memories", name: "Memories", path: "/memories" },
+    { id: "alumni", name: "Alumni", path: "/alumni" },
+    { id: "contact", name: "Contact Us", path: "/contact" },
   ];
 
   // Animation variants
@@ -98,15 +98,15 @@ export default function Navbar() {
 
           {/* Center Nav Links */}
           <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <motion.div
-                key={link.name}
+                key={link.id}
                 initial="hidden"
                 animate="show"
                 variants={containerVariants}
                 // onMouseEnter={() => setHoveredLink(index)}
                 // onMouseLeave={() => setHoveredLink(null)}
-                  onMouseEnter={() => setHoveredLink(link.path)}
+                  onMouseEnter={() => setHoveredLink(link.id)}
                   onMouseLeave={() => setHoveredLink(null)}
                 className="relative"
               >
@@ -228,7 +228,7 @@ export default function Navbar() {
             >
               {navLinks.map((link) => (
                 <motion.div
-                  key={link.name}
+                  key={link.id}
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
                   whileTap={{ scale: 0.98 }}
